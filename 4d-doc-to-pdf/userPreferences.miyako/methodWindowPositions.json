@@ -1,0 +1,158 @@
+﻿{
+	"Sources/Methods/TEST_02.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/parse_href.4dm": {
+		"left": 504,
+		"top": 109,
+		"width": 903,
+		"height": 755
+	},
+	"Sources/Methods/remove_empty_div.4dm": {
+		"left": 663,
+		"top": 219,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/TEST_03.4dm": {
+		"left": 554,
+		"top": 129,
+		"width": 866,
+		"height": 762
+	},
+	"Sources/Methods/get_books.4dm": {
+		"left": 663,
+		"top": 219,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/get_title_paragraph.4dm": {
+		"left": 835,
+		"top": 292,
+		"width": 903,
+		"height": 755
+	},
+	"Sources/Methods/get_preamble.4dm": {
+		"left": 485,
+		"top": 228,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/create_pdf.4dm": {
+		"left": 627,
+		"top": 201,
+		"width": 920,
+		"height": 743
+	},
+	"Sources/Methods/set_target.4dm": {
+		"left": 627,
+		"top": 201,
+		"width": 920,
+		"height": 743
+	},
+	"Sources/Methods/get_template.4dm": {
+		"left": 663,
+		"top": 219,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/get_title_list.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/get_document_title.4dm": {
+		"left": 727,
+		"top": 150,
+		"width": 699,
+		"height": 594
+	},
+	"Trash/Methods/(parse_svg_component).4dm": {
+		"left": 254,
+		"top": 177,
+		"width": 1061,
+		"height": 873
+	},
+	"Trash/Methods/(TEST_04).4dm": {
+		"left": 176,
+		"top": 192,
+		"width": 1166,
+		"height": 788
+	},
+	"Sources/Methods/v1.4dm": {
+		"left": 664,
+		"top": 152,
+		"width": 903,
+		"height": 755
+	},
+	"Sources/Methods/TEST_v2.4dm": {
+		"left": 504,
+		"top": 135,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/anchor_name_for_file.4dm": {
+		"left": 688,
+		"top": 143,
+		"width": 920,
+		"height": 743
+	},
+	"Sources/Methods/insert_h4_separator.4dm": {
+		"left": 750,
+		"top": 177,
+		"width": 903,
+		"height": 781
+	},
+	"Sources/Methods/insert_h2.4dm": {
+		"left": 485,
+		"top": 228,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/deep_copy_node_html.4dm": {
+		"left": 836,
+		"top": 158,
+		"width": 715,
+		"height": 641
+	},
+	"Sources/Methods/create_chapters.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/create_book.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/create_chapter_page.4dm": {
+		"left": 485,
+		"top": 228,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/insert_chapter_link.4dm": {
+		"left": 727,
+		"top": 150,
+		"width": 699,
+		"height": 594
+	},
+	"Sources/Methods/get_title_list_for_constants.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	},
+	"Sources/Methods/remove_iframe.4dm": {
+		"left": 496,
+		"top": 129,
+		"width": 903,
+		"height": 729
+	}
+}

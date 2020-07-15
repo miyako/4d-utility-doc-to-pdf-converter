@@ -1,0 +1,27 @@
+﻿{
+	"tests": {
+		"methods": [
+			"TEST_02",
+			"TEST_03"
+		]
+	},
+	"v2": {
+		"methods": [
+			"anchor_name_for_file",
+			"create_pdf",
+			"deep_copy_node_html",
+			"get_books",
+			"get_document_title",
+			"get_preamble",
+			"get_template",
+			"get_title_list_for_constants",
+			"get_title_paragraph",
+			"insert_chapter_link",
+			"insert_h2",
+			"insert_h4_separator",
+			"parse_href",
+			"remove_empty_div"
+		]
+	},
+	"trash": {}
+}

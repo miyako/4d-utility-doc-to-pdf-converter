@@ -1,0 +1,11 @@
+{
+    "name": "Tidy",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "Tidy",
+            "syntax": "Tidy(&O;&J):J",
+            "threadSafe": true
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+﻿{
+	"methods": {
+		"remove_iframe": {
+			"timeStamp": "2020-07-15T15:51:22.068Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"TEST_03": {
+			"timeStamp": "2020-07-13T16:25:46.168Z"
+		},
+		"create_chapter_page": {
+			"timeStamp": "2020-07-15T15:34:18.008Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"TEST_02": {
+			"timeStamp": "2020-07-13T10:45:45.397Z"
+		},
+		"parse_href": {
+			"timeStamp": "2020-07-15T16:50:21.156Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_template": {
+			"timeStamp": "2020-07-15T07:04:43.169Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"insert_h4_separator": {
+			"timeStamp": "2020-07-15T03:37:33.999Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"deep_copy_node_html": {
+			"timeStamp": "2020-07-15T03:41:05.760Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"create_chapters": {
+			"timeStamp": "2020-07-15T15:55:27.585Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_title_list": {
+			"timeStamp": "2020-07-15T15:55:27.573Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_title_paragraph": {
+			"timeStamp": "2020-07-15T03:58:48.045Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"insert_h2": {
+			"timeStamp": "2020-07-15T15:34:18.015Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"create_book": {
+			"timeStamp": "2020-07-15T15:55:27.579Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_title_list_for_constants": {
+			"timeStamp": "2020-07-15T15:55:20.338Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"set_target": {
+			"timeStamp": "2020-07-14T10:31:42.514Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"TEST_v2": {
+			"timeStamp": "2020-07-15T17:01:08.710Z"
+		},
+		"anchor_name_for_file": {
+			"timeStamp": "2020-07-15T00:10:29.727Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"remove_empty_div": {
+			"timeStamp": "2020-07-15T13:58:35.097Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_books": {
+			"timeStamp": "2020-07-15T14:01:58.513Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_preamble": {
+			"timeStamp": "2020-07-15T10:20:36.596Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"insert_chapter_link": {
+			"timeStamp": "2020-07-15T03:57:18.443Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"create_pdf": {
+			"timeStamp": "2020-07-14T10:31:57.676Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"get_document_title": {
+			"timeStamp": "2020-07-15T03:55:35.090Z",
+			"attributes": {
+				"invisible": true,
+				"preemptive": "capable"
+			}
+		},
+		"(TEST_04)": {
+			"timeStamp": "2020-07-14T02:00:00.343Z"
+		}
+	}
+}
