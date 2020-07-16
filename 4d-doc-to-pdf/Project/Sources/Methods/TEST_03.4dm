@@ -5,7 +5,7 @@ $file:=File:C1566($path;fk platform path:K87:2)
 
 $dom:=DOM Parse XML source:C719($file.platformPath)
 
-remove_empty_div ($dom)
+cajole_nodes ($dom)
 
 $html:=""
 

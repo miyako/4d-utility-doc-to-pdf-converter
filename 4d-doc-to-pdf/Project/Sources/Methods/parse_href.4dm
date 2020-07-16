@@ -6,19 +6,18 @@ the original href is preserved in a namespaced attribute
 */
 
 C_TEXT:C284($1;$dom)
-C_OBJECT:C1216($2;$file;$targetFile;$3;$rootFolder)
-C_TEXT:C284($4;$lang)
+C_OBJECT:C1216($2;$file;$targetFile;$3;$rootFolder;$4;$params)
 
 $dom:=$1
 $file:=$2
 $rootFolder:=$3
-$lang:=$4
+$params:=$4
+
+C_TEXT:C284($lang)
+$lang:=$params.lang
 
 ARRAY TEXT:C222($doms;0)
 ARRAY LONGINT:C221($types;0)
-
-C_OBJECT:C1216($log)
-C_COLLECTION:C1488($col)
 
 DOM GET XML CHILD NODES:C1081($dom;$types;$doms)
 
@@ -273,17 +272,17 @@ For ($i;1;Size of array:C274($types))
 								
 							: (Match regex:C1019("\\/[^/]+\\/index\\.[a-z]{2}\\.html";$value))  //bad link to index
 								
-								$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_to_home_page.txt")
-								$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-								$col.push(New object:C1471("file";$file.name;"href";$value))
-								$log.setText(JSON Stringify:C1217($col))
+								$log:=New object:C1471
+								$log.path:=$file.path
+								$log.href:=$value
+								$params.LOG_PUSH("warning_link_to_home";$log)
 								
 							: (Match regex:C1019("\\.\\.\\/\\.\\.\\/index\\.[a-z]{2}\\.html";$value))  //bad link to index
 								
-								$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_to_home_page.txt")
-								$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-								$col.push(New object:C1471("file";$file.name;"href";$value))
-								$log.setText(JSON Stringify:C1217($col))
+								$log:=New object:C1471
+								$log.path:=$file.path
+								$log.href:=$value
+								$params.LOG_PUSH("warning_link_to_home";$log)
 								
 							: (Match regex:C1019("[^?]+\\?&sort=.*";$value))  //table header
 								
@@ -295,10 +294,12 @@ For ($i;1;Size of array:C274($types))
 									$_value:=Split string:C1554($value;"/").join("/";ck ignore null or empty:K85:5)
 									$targetFile:=$file.parent.file($_value)
 									If ($targetFile.exists)
-										$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_double_slash.txt")
-										$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-										$col.push(New object:C1471("file";$file.name;"href";$value))
-										$log.setText(JSON Stringify:C1217($col))
+										
+										$log:=New object:C1471
+										$log.path:=$file.path
+										$log.href:=$value
+										$params.LOG_PUSH("warning_empty_path_component";$log)
+										
 										$value:=$_value
 									Else 
 										
@@ -330,10 +331,12 @@ For ($i;1;Size of array:C274($types))
 								If (Not:C34($targetFile.exists))
 									$_o_targetFile:=$targetFile.parent.file("o-"+$targetFile.name+$targetFile.extension)
 									If ($_o_targetFile.exists)
-										$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_to_obsolete_command.txt")
-										$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-										$col.push(New object:C1471("file";$file.name;"href";$value))
-										$log.setText(JSON Stringify:C1217($col))
+										
+										$log:=New object:C1471
+										$log.path:=$file.path
+										$log.href:=$value
+										$params.LOG_PUSH("warning_link_to_o_command";$log)
+										
 										$targetFile:=$_o_targetFile
 									Else 
 										
@@ -362,18 +365,22 @@ For ($i;1;Size of array:C274($types))
 										$targetFile:=$file.parent.file($_value)
 										
 										If ($targetFile.exists)
-											$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_wrong_version.txt")
-											$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-											$col.push(New object:C1471("file";$file.name;"href";$value))
-											$log.setText(JSON Stringify:C1217($col))
+											
+											$log:=New object:C1471
+											$log.path:=$file.path
+											$log.href:=$value
+											$params.LOG_PUSH("warning_link_to_wrong_version";$log)
+											
 											$value:=$_value
 										Else 
 											$_o_targetFile:=$targetFile.parent.file("o-"+$targetFile.name+$targetFile.extension)
 											If ($_o_targetFile.exists)
-												$log:=Folder:C1567(fk logs folder:K87:17).file("bad_link_to_obsolete_command.txt")
-												$col:=JSON Parse:C1218($log.getText();Is collection:K8:32)
-												$col.push(New object:C1471("file";$file.name;"href";$value))
-												$log.setText(JSON Stringify:C1217($col))
+												
+												$log:=New object:C1471
+												$log.path:=$file.path
+												$log.href:=$value
+												$params.LOG_PUSH("warning_link_to_wrong_version";$log)
+												
 												$targetFile:=$_o_targetFile
 											Else 
 												TRACE:C157
@@ -472,6 +479,6 @@ For ($i;1;Size of array:C274($types))
 				End if 
 			End if 
 		End for 
-		parse_href ($dom;$file;$rootFolder;$lang)
+		parse_href ($dom;$file;$rootFolder;$params)
 	End if 
 End for 

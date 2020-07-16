@@ -5,17 +5,6 @@ C_COLLECTION:C1488($0;$books)
 $params:=$1
 $books:=New collection:C1472
 
-$CREATE_LOG:=True:C214
-
-If ($CREATE_LOG)
-	$logs:=Folder:C1567(fk logs folder:K87:17)
-	$logs.file("bad_link_to_home_page.txt").setText("[]")
-	$logs.file("bad_link_to_obsolete_command.txt").setText("[]")
-	$logs.file("bad_link_double_slash.txt").setText("[]")
-	$logs.file("bad_link_wrong_version.txt").setText("[]")
-	$logs.file("bad_link_empty_anchor.txt").setText("[]")
-End if 
-
 C_OBJECT:C1216($sourceIndexFolder)
 $sourceIndexFolder:=$params.sourceIndexFolder
 
@@ -32,7 +21,7 @@ If ($sourceIndexFolder.exists)
 		If ($status.status<2)
 			$html:=Replace string:C233($status.html;"&nbsp;";"&#160;";*)
 			$dom:=DOM Parse XML variable:C720($html)
-			remove_empty_div ($dom)  //empty div creates indent
+			cajole_nodes ($dom;$sourceIndexFile;$params)  //empty div creates indent
 			If (False:C215)
 				$tdc_roundbox:=DOM Find XML element:C864($dom;"html/body/table/tr[2]/td[2]/div")
 				$home_boxes:=DOM Find XML element:C864($tdc_roundbox;"div/div/div[6]")
@@ -64,7 +53,14 @@ If ($sourceIndexFolder.exists)
 			Until (OK=0)
 			DOM CLOSE XML:C722($dom)
 		Else 
+			
+			$log:=New object:C1471
+			$log.path:=$sourceIndexFile.path
+			$log.status:=$status
+			$params.LOG_PUSH("error_invalid_html";$log)
+			
 			TRACE:C157  //Tidy fail
+			
 		End if 
 	End if 
 End if 

@@ -1,26 +1,43 @@
 ﻿{
-	"tests": {
-		"methods": [
-			"TEST_02",
-			"TEST_03"
-		]
-	},
-	"v2": {
+	"checked_for_log": {
 		"methods": [
 			"anchor_name_for_file",
+			"cajole_nodes",
+			"create_book",
+			"create_chapter_page",
 			"create_pdf",
 			"deep_copy_node_html",
 			"get_books",
 			"get_document_title",
 			"get_preamble",
 			"get_template",
+			"get_title_list",
 			"get_title_list_for_constants",
 			"get_title_paragraph",
 			"insert_chapter_link",
 			"insert_h2",
 			"insert_h4_separator",
 			"parse_href",
-			"remove_empty_div"
+			"remove_iframe",
+			"set_target"
+		]
+	},
+	"log": {
+		"methods": [
+			"log_end",
+			"log_push",
+			"log_start"
+		]
+	},
+	"tests": {
+		"methods": [
+			"TEST_03",
+			"TEST_04"
+		]
+	},
+	"v2": {
+		"methods": [
+			"create_chapters"
 		]
 	},
 	"trash": {}

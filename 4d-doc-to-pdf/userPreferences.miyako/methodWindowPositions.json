@@ -1,21 +1,9 @@
 ﻿{
-	"Sources/Methods/TEST_02.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
-	},
 	"Sources/Methods/parse_href.4dm": {
-		"left": 504,
-		"top": 109,
-		"width": 903,
-		"height": 755
-	},
-	"Sources/Methods/remove_empty_div.4dm": {
-		"left": 663,
-		"top": 219,
-		"width": 903,
-		"height": 729
+		"left": 677,
+		"top": 174,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"left": 554,
@@ -24,10 +12,10 @@
 		"height": 762
 	},
 	"Sources/Methods/get_books.4dm": {
-		"left": 663,
-		"top": 219,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/get_title_paragraph.4dm": {
 		"left": 835,
@@ -36,16 +24,16 @@
 		"height": 755
 	},
 	"Sources/Methods/get_preamble.4dm": {
-		"left": 485,
-		"top": 228,
-		"width": 903,
-		"height": 729
+		"left": 651,
+		"top": 184,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/create_pdf.4dm": {
-		"left": 627,
-		"top": 201,
-		"width": 920,
-		"height": 743
+		"left": 798,
+		"top": 193,
+		"width": 844,
+		"height": 710
 	},
 	"Sources/Methods/set_target.4dm": {
 		"left": 627,
@@ -54,22 +42,22 @@
 		"height": 743
 	},
 	"Sources/Methods/get_template.4dm": {
-		"left": 663,
-		"top": 219,
-		"width": 903,
-		"height": 729
+		"left": 542,
+		"top": 189,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/get_title_list.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/get_document_title.4dm": {
-		"left": 727,
-		"top": 150,
-		"width": 699,
-		"height": 594
+		"left": 615,
+		"top": 173,
+		"width": 1160,
+		"height": 792
 	},
 	"Trash/Methods/(parse_svg_component).4dm": {
 		"left": 254,
@@ -90,10 +78,10 @@
 		"height": 755
 	},
 	"Sources/Methods/TEST_v2.4dm": {
-		"left": 504,
-		"top": 135,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 137,
+		"width": 1160,
+		"height": 818
 	},
 	"Sources/Methods/anchor_name_for_file.4dm": {
 		"left": 688,
@@ -120,16 +108,16 @@
 		"height": 641
 	},
 	"Sources/Methods/create_chapters.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/create_book.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/create_chapter_page.4dm": {
 		"left": 485,
@@ -144,15 +132,63 @@
 		"height": 594
 	},
 	"Sources/Methods/get_title_list_for_constants.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
 	},
 	"Sources/Methods/remove_iframe.4dm": {
-		"left": 496,
-		"top": 129,
-		"width": 903,
-		"height": 729
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
+	},
+	"Sources/Methods/log_start.4dm": {
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
+	},
+	"Sources/Methods/log_end.4dm": {
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
+	},
+	"Sources/Methods/TEST_04.4dm": {
+		"left": 648,
+		"top": 200,
+		"width": 948,
+		"height": 611
+	},
+	"Sources/Methods/log_push.4dm": {
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
+	},
+	"Trash/Methods/(check_for_log).4dm": {
+		"left": 542,
+		"top": 189,
+		"width": 1160,
+		"height": 792
+	},
+	"Trash/Methods/(checked_for_log).4dm": {
+		"left": 542,
+		"top": 189,
+		"width": 1160,
+		"height": 792
+	},
+	"Sources/Methods/cajole_nodes.4dm": {
+		"left": 475,
+		"top": 163,
+		"width": 1160,
+		"height": 792
+	},
+	"Trash/Methods/(TEST_02).4dm": {
+		"left": 529,
+		"top": 177,
+		"width": 1160,
+		"height": 792
 	}
 }

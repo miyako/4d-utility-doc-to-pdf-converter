@@ -1,30 +1,12 @@
 ﻿{
-	"Sources/Methods/TEST_02.4dm": {
-		"startSelection": 0,
-		"endSelection": 11,
-		"firstSelectedLine": 6,
-		"lastSelectedLine": 6,
-		"folding": [],
-		"bookmarks": [],
-		"stamp": "2020-07-13T10:45:45.397Z"
-	},
 	"Sources/Methods/parse_href.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 238,
-		"lastSelectedLine": 238,
+		"startSelection": 49,
+		"endSelection": 53,
+		"firstSelectedLine": 380,
+		"lastSelectedLine": 380,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T16:50:21.156Z"
-	},
-	"Sources/Methods/remove_empty_div.4dm": {
-		"startSelection": 14,
-		"endSelection": 0,
-		"firstSelectedLine": 47,
-		"lastSelectedLine": 47,
-		"folding": [],
-		"bookmarks": [],
-		"stamp": "2020-07-15T13:58:35.097Z"
+		"stamp": "2020-07-16T06:07:48.544Z"
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"startSelection": 0,
@@ -36,16 +18,13 @@
 		"stamp": "2020-07-13T16:25:46.168Z"
 	},
 	"Sources/Methods/get_books.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 16,
-		"lastSelectedLine": 16,
-		"folding": [
-			34,
-			44
-		],
+		"startSelection": 27,
+		"endSelection": 27,
+		"firstSelectedLine": 56,
+		"lastSelectedLine": 56,
+		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T14:01:58.513Z"
+		"stamp": "2020-07-16T06:18:53.670Z"
 	},
 	"Sources/Methods/get_title_paragraph.4dm": {
 		"startSelection": 15,
@@ -84,24 +63,22 @@
 		"stamp": "2020-07-14T10:31:42.514Z"
 	},
 	"Sources/Methods/get_template.4dm": {
-		"startSelection": 48,
-		"endSelection": 48,
-		"firstSelectedLine": 7,
-		"lastSelectedLine": 7,
+		"startSelection": 13,
+		"endSelection": 13,
+		"firstSelectedLine": 22,
+		"lastSelectedLine": 22,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T07:04:43.169Z"
+		"stamp": "2020-07-16T05:03:53.436Z"
 	},
 	"Sources/Methods/get_title_list.4dm": {
-		"startSelection": 0,
-		"endSelection": 11,
-		"firstSelectedLine": 134,
-		"lastSelectedLine": 134,
-		"folding": [
-			111
-		],
+		"startSelection": 23,
+		"endSelection": 23,
+		"firstSelectedLine": 168,
+		"lastSelectedLine": 168,
+		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T15:55:27.573Z"
+		"stamp": "2020-07-16T06:19:09.484Z"
 	},
 	"Sources/Methods/get_document_title.4dm": {
 		"startSelection": 8,
@@ -111,15 +88,6 @@
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-07-15T03:55:35.090Z"
-	},
-	"Trash/Methods/(TEST_04).4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 0,
-		"lastSelectedLine": 0,
-		"folding": [],
-		"bookmarks": [],
-		"stamp": "2020-07-14T02:00:00.343Z"
 	},
 	"Sources/Methods/v1.4dm": {
 		"startSelection": 17,
@@ -135,13 +103,13 @@
 		"stamp": ""
 	},
 	"Sources/Methods/TEST_v2.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 41,
-		"lastSelectedLine": 41,
+		"startSelection": 7,
+		"endSelection": 18,
+		"firstSelectedLine": 70,
+		"lastSelectedLine": 70,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T17:01:08.710Z"
+		"stamp": "2020-07-16T06:18:30.930Z"
 	},
 	"Sources/Methods/anchor_name_for_file.4dm": {
 		"startSelection": 28,
@@ -180,22 +148,26 @@
 		"stamp": "2020-07-15T03:41:05.760Z"
 	},
 	"Sources/Methods/create_chapters.4dm": {
-		"startSelection": 0,
-		"endSelection": 11,
-		"firstSelectedLine": 91,
-		"lastSelectedLine": 91,
-		"folding": [],
+		"startSelection": 23,
+		"endSelection": 23,
+		"firstSelectedLine": 191,
+		"lastSelectedLine": 191,
+		"folding": [
+			24,
+			29,
+			50
+		],
 		"bookmarks": [],
-		"stamp": "2020-07-15T15:55:27.585Z"
+		"stamp": "2020-07-16T06:19:40.542Z"
 	},
 	"Sources/Methods/create_book.4dm": {
 		"startSelection": 20,
-		"endSelection": 0,
-		"firstSelectedLine": 25,
-		"lastSelectedLine": 25,
+		"endSelection": 20,
+		"firstSelectedLine": 46,
+		"lastSelectedLine": 46,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T15:55:27.579Z"
+		"stamp": "2020-07-16T06:20:26.260Z"
 	},
 	"Sources/Methods/create_chapter_page.4dm": {
 		"startSelection": 28,
@@ -218,19 +190,73 @@
 	"Sources/Methods/get_title_list_for_constants.4dm": {
 		"startSelection": 23,
 		"endSelection": 23,
-		"firstSelectedLine": 88,
-		"lastSelectedLine": 88,
+		"firstSelectedLine": 98,
+		"lastSelectedLine": 98,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T15:55:20.338Z"
+		"stamp": "2020-07-16T06:20:40.445Z"
 	},
 	"Sources/Methods/remove_iframe.4dm": {
-		"startSelection": 0,
-		"endSelection": 8,
+		"startSelection": 19,
+		"endSelection": 19,
+		"firstSelectedLine": 11,
+		"lastSelectedLine": 11,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-16T06:21:24.732Z"
+	},
+	"Sources/Methods/log_start.4dm": {
+		"startSelection": 17,
+		"endSelection": 17,
+		"firstSelectedLine": 29,
+		"lastSelectedLine": 29,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-16T06:21:09.794Z"
+	},
+	"Sources/Methods/log_end.4dm": {
+		"startSelection": 13,
+		"endSelection": 13,
+		"firstSelectedLine": 25,
+		"lastSelectedLine": 25,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-16T06:20:55.327Z"
+	},
+	"Sources/Methods/TEST_04.4dm": {
+		"startSelection": 17,
+		"endSelection": 17,
+		"firstSelectedLine": 16,
+		"lastSelectedLine": 16,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-16T05:20:18.402Z"
+	},
+	"Sources/Methods/log_push.4dm": {
+		"startSelection": 18,
+		"endSelection": 18,
 		"firstSelectedLine": 26,
 		"lastSelectedLine": 26,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-07-15T15:51:22.068Z"
+		"stamp": "2020-07-16T06:20:55.330Z"
+	},
+	"Sources/Methods/cajole_nodes.4dm": {
+		"startSelection": 18,
+		"endSelection": 18,
+		"firstSelectedLine": 16,
+		"lastSelectedLine": 16,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-16T06:21:17.932Z"
+	},
+	"Trash/Methods/(TEST_02).4dm": {
+		"startSelection": 0,
+		"endSelection": 10,
+		"firstSelectedLine": 6,
+		"lastSelectedLine": 6,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-07-13T10:45:45.397Z"
 	}
 }

@@ -2,12 +2,15 @@
 C_TEXT:C284($1;$dom)
 C_OBJECT:C1216($2;$book)
 C_COLLECTION:C1488($3;$html)
-C_TEXT:C284($4;$lang)
+C_OBJECT:C1216($4;$params)
 
 $dom:=$1
 $book:=$2
 $html:=$3
-$lang:=$4
+$params:=$4
+
+C_TEXT:C284($lang)
+$lang:=$params.lang
 
 C_TEXT:C284($stringValue)
 C_TEXT:C284($nodeHtml)
@@ -85,14 +88,21 @@ If (OK=1)
 				$page:=Replace string:C233($status.html;"&nbsp;";"&#160;";*)
 				$pageDom:=DOM Parse XML variable:C720($page)
 				
-				remove_empty_div ($pageDom)
-				parse_href ($pageDom;$chapterFile;$book.base;$lang)
-				remove_iframe ($pageDom)
+				cajole_nodes ($pageDom;$chapterFile;$params)
+				parse_href ($pageDom;$chapterFile;$book.base;$params)
+				remove_iframe ($pageDom;$chapterFile;$params)
 				
 				create_chapter_page ($pageDom;$chapterFile;$html)
 				
 			Else 
+				
+				$log:=New object:C1471
+				$log.path:=$chapterFile.path
+				$log.status:=$status
+				$params.LOG_PUSH("error_invalid_html";$log)
+				
 				TRACE:C157  //Tidy fail
+				
 			End if 
 		End for each 
 		

@@ -2,21 +2,36 @@
 C_OBJECT:C1216($params)
 $params:=New object:C1471
 
+/*
+the local file path of downloaded static documents
+processing online source is not supported for now
+*/
+
 $path:="Macintosh HD:Users:Shared:4Dv18:"
-$params.sourceIndexFolder:=Folder:C1567($path;fk platform path:K87:2)  //must be platform path, because of relative paths
+
+/*
+don't use file system (e.g. "/RESOURCES/")
+links may traverse outside the base URL
+*/
+
+$params.sourceIndexFolder:=Folder:C1567($path;fk platform path:K87:2)
 $params.lang:="ja"
 
-$template:=get_template ($params.lang)
+/*
+export detected errors (missing link, etc)
+*/
+
+$params.CREATE_LOG:=True:C214
+$params.LOG_FOLDER:=Folder:C1567(fk logs folder:K87:17)
+$params.LOG_START:=Formula:C1597(log_start )
+$params.LOG_PUSH:=Formula:C1597(log_push )
+$params.LOG_END:=Formula:C1597(log_end )
+
+$params.LOG_START()
 
 $books:=get_books ($params)
 
-
 If (False:C215)
-	
-	  //ja has issues
-	
-	  //-----
-	
 	$book:=$books.query("id === :1";"book_4673706")[0]  //バックアップ設定ファイル
 	$book:=$books.query("id === :1";"book_4650692")[0]  //SQLリファレンス
 	$book:=$books.query("id === :1";"book_4690338")[0]  //4D ODBC Driver
@@ -47,12 +62,23 @@ $book:=$books.query("id === :1";"book_4504285")[0]  //ランゲージリファ�
 
 */
 
-$html:=create_book ($book;$template;$params.lang)
+/*
+for now, no major differences between languages
+the idea is to switch fonts, in particular, for japanese (メイリオ)  
+*/
 
-$targetFolder:=Folder:C1567(System folder:C487(Desktop:K41:16)+"test";fk platform path:K87:2)
+$template:=get_template ($params)
+
+$html:=create_book ($book;$template;$params)
+
+$params.LOG_END()
+
+/*
+now convert html to pdf!
+*/
+
+$targetFolder:=Folder:C1567(System folder:C487(Desktop:K41:16)+"export_pdf";fk platform path:K87:2)
 
 $target:=set_target ($targetFolder;$html;$book.name)
-
 $pdfPath:=create_pdf ($target)
-
 OPEN URL:C673($pdfPath)

@@ -2,12 +2,15 @@
 C_TEXT:C284($1;$dom)
 C_OBJECT:C1216($2;$book)
 C_COLLECTION:C1488($3;$html)
-C_TEXT:C284($4;;$lang)
+C_OBJECT:C1216($4;$params)
 
 $dom:=$1
 $book:=$2
 $html:=$3
-$lang:=$4
+$params:=$4
+
+C_TEXT:C284($lang)
+$lang:=$params.lang
 
 $Chapter_list:=DOM Find XML element by ID:C1010($dom;"Chapter_list")
 
@@ -78,6 +81,10 @@ If (OK=1)
 		$status:=Tidy ($chapterFile.getContent();$options)
 		If ($status.status<2)
 			
+/*
+use this case block to trace specific source files
+*/
+			
 			Case of 
 				: ($chapterFile.name="Introduction.200-4611725.@")
 				: ($chapterFile.name="4D-SVG-Constants.202-4611728.@")
@@ -89,9 +96,9 @@ If (OK=1)
 			$page:=Replace string:C233($status.html;"&nbsp;";"&#160;";*)
 			$pageDom:=DOM Parse XML variable:C720($page)
 			
-			remove_empty_div ($pageDom)
-			parse_href ($pageDom;$chapterFile;$book.base;$lang)
-			remove_iframe ($pageDom)
+			cajole_nodes ($pageDom;$chapterFile;$params)
+			parse_href ($pageDom;$chapterFile;$book.base;$params)
+			remove_iframe ($pageDom;$chapterFile;$params)
 			
 			$TitleTitle:=DOM Find XML element by ID:C1010($pageDom;"TitleTitle")
 			If (OK=1)
@@ -123,7 +130,7 @@ command syntax
 								
 								insert_h4_separator ($html)
 								
-								get_title_list ($pageDom;$book;$html;$lang)
+								get_title_list ($pageDom;$book;$html;$params)
 								
 							Else 
 								TRACE:C157  //unknown document structure
@@ -226,7 +233,14 @@ What-s-new.901-4611717.
 			End if 
 			DOM CLOSE XML:C722($pageDom)
 		Else 
+			
+			$log:=New object:C1471
+			$log.path:=$chapterFile.path
+			$log.status:=$status
+			$params.LOG_PUSH("error_invalid_html";$log)
+			
 			TRACE:C157  //Tidy fail
+			
 		End if 
 	End for each 
 Else 
