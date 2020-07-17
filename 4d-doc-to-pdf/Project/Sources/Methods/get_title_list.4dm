@@ -152,7 +152,34 @@ Introduction.200-4611725.
 	
 	For each ($chapterFile;$chapterFiles)
 		$options:=New object:C1471("xmlOut";True:C214)
-		$status:=Tidy ($chapterFile.getContent();$options)
+		
+		$_html:=$chapterFile.getText("utf-8")
+		
+		$originalLength:=Length:C16($_html)
+		
+		$_html:=Replace string:C233($_html;"<mon12b>";"")
+		$_html:=Replace string:C233($_html;"</mon12b>";"")
+		$_html:=Replace string:C233($_html;"<gen9>";"")
+		$_html:=Replace string:C233($_html;"</gen9>";"")
+		$_html:=Replace string:C233($_html;"<mon9>";"")
+		$_html:=Replace string:C233($_html;"</mon9>";"")
+		$_html:=Replace string:C233($_html;"<pal12b>";"")
+		$_html:=Replace string:C233($_html;"</pal12b>";"")
+		
+		If (Length:C16($_html)#$originalLength)
+			
+			$log:=New object:C1471
+			$log.path:=$chapterFile.path
+			$log.status:=$status
+			$params.LOG_PUSH("warning_invalid_html_tag";$log)
+			
+		End if 
+		
+		C_BLOB:C604($content)
+		CONVERT FROM TEXT:C1011($_html;"utf-8";$content)
+		
+		$status:=Tidy ($content;$options)
+		
 		If ($status.status<2)
 			
 			$page:=Replace string:C233($status.html;"&nbsp;";"&#160;";*)

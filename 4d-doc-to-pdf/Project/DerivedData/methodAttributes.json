@@ -1,7 +1,7 @@
 ﻿{
 	"methods": {
 		"remove_iframe": {
-			"timeStamp": "2020-07-15T15:51:22.068Z",
+			"timeStamp": "2020-07-16T06:21:24.732Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
@@ -17,11 +17,8 @@
 				"preemptive": "capable"
 			}
 		},
-		"(TEST_02)": {
-			"timeStamp": "2020-07-13T10:45:45.397Z"
-		},
 		"parse_href": {
-			"timeStamp": "2020-07-15T16:50:21.156Z",
+			"timeStamp": "2020-07-17T12:37:32.858Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
@@ -33,6 +30,9 @@
 				"invisible": true,
 				"preemptive": "capable"
 			}
+		},
+		"TEST_05": {
+			"timeStamp": "2020-07-17T06:22:08.639Z"
 		},
 		"TEST_04": {
 			"timeStamp": "2020-07-16T05:20:18.402Z"
@@ -52,21 +52,21 @@
 			}
 		},
 		"cajole_nodes": {
-			"timeStamp": "2020-07-16T05:34:44.860Z",
+			"timeStamp": "2020-07-16T06:21:17.932Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"create_chapters": {
-			"timeStamp": "2020-07-16T05:51:09.714Z",
+			"timeStamp": "2020-07-17T01:18:08.830Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_title_list": {
-			"timeStamp": "2020-07-16T05:51:09.702Z",
+			"timeStamp": "2020-07-17T12:33:51.598Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
@@ -80,7 +80,7 @@
 			}
 		},
 		"log_push": {
-			"timeStamp": "2020-07-16T05:46:35.054Z",
+			"timeStamp": "2020-07-17T12:35:33.874Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
@@ -94,28 +94,28 @@
 			}
 		},
 		"log_end": {
-			"timeStamp": "2020-07-16T05:45:23.946Z",
+			"timeStamp": "2020-07-16T06:20:55.327Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"create_book": {
-			"timeStamp": "2020-07-15T15:55:27.579Z",
+			"timeStamp": "2020-07-16T06:20:26.260Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_title_list_for_constants": {
-			"timeStamp": "2020-07-16T05:51:09.709Z",
+			"timeStamp": "2020-07-16T06:20:40.445Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"log_start": {
-			"timeStamp": "2020-07-16T05:44:44.881Z",
+			"timeStamp": "2020-07-17T12:33:51.602Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
@@ -129,7 +129,7 @@
 			}
 		},
 		"TEST_v2": {
-			"timeStamp": "2020-07-16T05:48:54.983Z"
+			"timeStamp": "2020-07-17T06:56:03.174Z"
 		},
 		"anchor_name_for_file": {
 			"timeStamp": "2020-07-15T00:10:29.727Z",
@@ -139,7 +139,7 @@
 			}
 		},
 		"get_books": {
-			"timeStamp": "2020-07-16T05:51:09.711Z",
+			"timeStamp": "2020-07-16T06:18:53.670Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"

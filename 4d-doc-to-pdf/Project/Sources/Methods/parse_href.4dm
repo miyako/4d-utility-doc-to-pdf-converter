@@ -36,9 +36,17 @@ For ($i;1;Size of array:C274($types))
 						
 						ARRAY LONGINT:C221($pos;0)
 						ARRAY LONGINT:C221($len;0)
+						
 						If (Match regex:C1019("([^#]+)(#.+)";$value;1;$pos;$len))
 							$value:=Substring:C12($value;$pos{1};$len{1})
 						End if 
+						
+						Case of 
+							: (Match regex:C1019("[^?]+\\?&sort=.*";$value))
+								  //table header
+							: (Match regex:C1019("([^?]+)(\\?.*)";$value;1;$pos;$len))
+								$value:=Substring:C12($value;$pos{1};$len{1})
+						End case 
 						
 						$suffix:=$lang
 						  //extract lang suffix
@@ -160,6 +168,7 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Stored-Procedures@")
 								$value:=Replace string:C233($value;"216966";"4672416";*)
+								$value:=Replace string:C233($value;"300-67459";"300-4672416";*)
 								
 							: ($value="@Encrypting-ClientServer-Connections@")
 								$value:=Replace string:C233($value;"67435";"4672419";*)
@@ -191,8 +200,14 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Principles-for-integrating-4D-and-the-4D-SQL-engine@")
 								$value:=Replace string:C233($value;"Principles-for-integrating-4D-and-the-4D-SQL-engine.300-72604";"4D-SQL-engine-implementation.300-4650700";*)
 								
-							: ($value="@transportersend@")
-								$value:=Replace string:C233($value;"transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
+							: ($value="@SMTP-transportersend@")
+								$value:=Replace string:C233($value;"SMTP-transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
+								
+							: ($value="@SMTP-transportercheckConnection.305-4505971@")
+								$value:=Replace string:C233($value;"SMTP-transportercheckConnection.305-4505971";"SMTP-transportercheckConnection.300-4505971";*)
+								
+							: ($value="@transportercheckConnection.305-4505971@")
+								$value:=Replace string:C233($value;"transportercheckConnection.305-4505971";"SMTP-transportercheckConnection.300-4505971";*)
 								
 							: ($value="@Field-properties@")
 								$value:=Replace string:C233($value;"1477337";"4575567";*)
@@ -202,6 +217,7 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Web-server-configuration-and-connection-management@")
 								$value:=Replace string:C233($value;"977167";"4504720";*)
+								$value:=Replace string:C233($value;"300-205403";"300-4504720";*)
 								
 							: ($value="@Command-Line-Interface-extended@")
 								$value:=Replace string:C233($value;"Command-Line-Interface-extended.300-1570420";"Command-Line-Interface.300-4575704";*)
@@ -237,38 +253,266 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@SQL-Server-Page@")
 								$value:=Replace string:C233($value;"845377";"4672435";*)
 								
+							: ($value="@ForEnd-for@")
+								$value:=Replace string:C233($value;"978013";"4505539";*)
+								
+							: ($value="@Appendix-E-Description-of-log-files@")
+								$value:=Replace string:C233($value;"Appendix-E-Description-of-log-files.300-3188166";"Description-of-log-files.300-4575486";*)
+								
+							: ($value="@E.300-3188166@")
+								$value:=Replace string:C233($value;"E.300-3188166";"Description-of-log-files.300-4575486";*)
+								
+							: ($value="@-.300-4575475@")
+								$value:=Replace string:C233($value;"-.300-4575475";"DatabaseMemory-page.300-4575475";*)
+								
+							: ($value="@-.300-4575486@")
+								$value:=Replace string:C233($value;"-.300-4575486";"Description-of-log-files.300-4575486";*)
+								
+							: ($value="@-.300-4575701@")
+								$value:=Replace string:C233($value;"-.300-4575701";"Creating-a-new-database.300-4575701";*)
+								
+							: ($value="@Web.300-4504709@")
+								$value:=Replace string:C233($value;"Web.300-4504709";"Web-Server-Settings.300-4504709";*)
+								
+							: ($value="@On-Server-Startup.301-4672407@")
+								$value:=Replace string:C233($value;"On-Server-Startup.301-4672407";"On-Server-Startup-Database-Method.301-4672407";*)
+								
+							: ($value="@-.300-4575608@")
+								$value:=Replace string:C233($value;"-.300-4575608";"Spell-checking.300-4575608";*)
+								
+							: ($value="@SQL.300-4575466@")
+								$value:=Replace string:C233($value;"SQL.300-4575466";"SQL-page.300-4575466";*)
+								
+							: ($value="@-.300-4575476@")
+								$value:=Replace string:C233($value;"-.300-4575476";"Compatibility-page.300-4575476";*)
+								
+							: ($value="@-.300-4672425@")
+								$value:=Replace string:C233($value;"-.300-4672425";"Network-and-Client-Server-options.300-4672425";*)
+								
+							: ($value="@-.300-4575704@")
+								$value:=Replace string:C233($value;"-.300-4575704";"Command-Line-Interface.300-4575704";*)
+								
+							: ($value="@4D-Server.300-4672439@")
+								$value:=Replace string:C233($value;"4D-Server.300-4672439";"Connecting-to-a-4D-Server-Database.300-4672439";*)
+								
+							: ($value="@-.300-4505257@")
+								$value:=Replace string:C233($value;"-.300-4505257";"Window-Types-compatibility.300-4505257";*)
+								
+							: ($value="@LDAP-LOGIN@")
+								$value:=Replace string:C233($value;"2005970";"4505637";*)
+								
+							: ($value="@collectionsort@")
+								$value:=Replace string:C233($value;"collectionsort.305-4505853";"collectionsort.300-4505853";*)
+								
+							: ($value="@Overview-of-SQL-Commands@")
+								$value:=Replace string:C233($value;"977496";"4505595";*)
+								
+							: ($value="@SQL.302-977600@")
+								$value:=Replace string:C233($value;"SQL.302-977600";"SQL.302-4504445";*)
+								
+							: ($value="%20http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html")
+								$value:="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"
+								  //WA-GET-LAST-URL-ERROR.301-4504842.en.html
+								
+							: ($value="@4D-HTML-Tags@")
+								$value:=Replace string:C233($value;"4D-HTML-Tags.300-1342175";"4D-Transformation-Tags.300-4505674";*)
+								
+							: ($value="@Multi-style-Rich-text-area@")
+								$value:=Replace string:C233($value;"1477147";"4575616";*)
+								
+							: ($value="@QUERY-BY-ATTRIBUTE@")
+								$value:=Replace string:C233($value;"1477147";"4575616";*)
+								
+							: ($value="@/Storing-4D-Write-Pro-documents-in-4D-Object-fields@")
+								$value:=Replace string:C233($value;"300-2584906";"200-4522987";*)
+								
+							: ($value="@collectionpush@")
+								$value:=Replace string:C233($value;"305-4505847";"300-4505847";*)
+								
+							: ($value="@collectioninsert@")
+								$value:=Replace string:C233($value;"305-4505848";"300-4505848";*)
+								
+							: ($value="@C-INTEGER@")
+								$value:=Replace string:C233($value;"C-INTEGER.301-206201";"o-C-INTEGER.301-4506033";*)
+								
+							: ($value="@LOCKED-ATTRIBUTES@")
+								$value:=Replace string:C233($value;"LOCKED-ATTRIBUTES.301-977687";"LOCKED-BY.301-4505158";*)
+								
+							: ($value="@OUTPUT-FORM@")
+								$value:=Replace string:C233($value;"OUTPUT-FORM.301-206115";"FORM-SET-OUTPUT.301-4505760";*)
+								
+							: ($value="@PAGE-SETUP@")
+								$value:=Replace string:C233($value;"PAGE-SETUP.301-977802";"o-PAGE-SETUP.301-4505822";*)
+								
+							: ($value="@INPUT-FORM@")
+								$value:=Replace string:C233($value;"INPUT-FORM.301-206114";"FORM-SET-INPUT.301-4505766";*)
+								
+							: ($value="@System-Documents@")
+								$value:=Replace string:C233($value;"System-Documents.201-4504290";"System-Documents.300-4504519";*)
+								
+							: ($value="@ADD-SUBRECORD@")
+								$value:=Replace string:C233($value;"ADD-SUBRECORD.301-206192";"o-ADD-SUBRECORD.301-4506007";*)
+								
+							: ($value="@MODIFY-SUBRECORD@")
+								$value:=Replace string:C233($value;"MODIFY-SUBRECORD.301-206191";"o-MODIFY-SUBRECORD.301-4506008";*)
+								
+							: ($value="@FORM-GET-PARAMETER@")
+								$value:=Replace string:C233($value;"FORM-GET-PARAMETER.301-978100";"o-FORM-GET-PARAMETER.301-4506030";*)
+								
+							: ($value="@folderfiles@")
+								$value:=Replace string:C233($value;"305-4506056";"300-4506056";*)
+								
+							: ($value="@folderfile@")
+								$value:=Replace string:C233($value;"305-4506054";"300-4506054";*)
+								
+							: ($value="@folderfolders@")
+								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
+								
+							: ($value="@folderfolder@")
+								$value:=Replace string:C233($value;"305-4506053";"300-4506053";*)
+								
+							: ($value="@filecopyTo@")
+								$value:=Replace string:C233($value;"305-4506082";"300-4506082";*)
+								
+							: ($value="@filecreateAlias@")
+								$value:=Replace string:C233($value;"305-4506090";"300-4506090";*)
+								
+							: ($value="@filecreate@")
+								$value:=Replace string:C233($value;"305-4506085";"300-4506085";*)
+								
+							: ($value="@filedelete@")
+								$value:=Replace string:C233($value;"305-4506084";"300-4506084";*)
+								
+							: ($value="@filegetContent@")
+								$value:=Replace string:C233($value;"305-4506086";"300-4506086";*)
+								
+							: ($value="@filegetIcon@")
+								$value:=Replace string:C233($value;"305-4506065";"300-4506065";*)
+								
+							: ($value="@filegetText@")
+								$value:=Replace string:C233($value;"305-4506088";"300-4506088";*)
+								
+							: ($value="@filemoveTo@")
+								$value:=Replace string:C233($value;"305-4506083";"300-4506083";*)
+								
+							: ($value="@filerename@")
+								$value:=Replace string:C233($value;"305-4506081";"300-4506081";*)
+								
+							: ($value="@filesetContent@")
+								$value:=Replace string:C233($value;"305-4506087";"300-4506087";*)
+								
+							: ($value="@filesetText@")
+								$value:=Replace string:C233($value;"305-4506089";"300-4506089";*)
+								
+							: ($value="@foldercopyTo@")
+								$value:=Replace string:C233($value;"305-4506059";"300-4506059";*)
+								
+							: ($value="@foldercreateAlias@")
+								$value:=Replace string:C233($value;"305-4506063";"300-4506063";*)
+								
+							: ($value="@foldercreate@")
+								$value:=Replace string:C233($value;"305-4506062";"300-4506062";*)
+								
+							: ($value="@folderdelete@")
+								$value:=Replace string:C233($value;"305-4506061";"300-4506061";*)
+								
+							: ($value="@foldergetIcon@")
+								$value:=Replace string:C233($value;"305-4506057";"300-4506057";*)
+								
+							: ($value="@foldermoveTo@")
+								$value:=Replace string:C233($value;"305-4506060";"300-4506060";*)
+								
+							: ($value="@folderrename@")
+								$value:=Replace string:C233($value;"305-4506058";"300-4506058";*)
+								
+							: ($value="@folderfolders@")
+								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
+								
+							: ($value="@formulaapply@")
+								$value:=Replace string:C233($value;"305-4505752";"300-4505752";*)
+								
+							: ($value="@formulacall@")
+								$value:=Replace string:C233($value;"305-4505751";"300-4505751";*)
+								
+							: ($value="@signalwait@")
+								$value:=Replace string:C233($value;"305-4505568";"300-4505568";*)
+								
+							: ($value="@signaltrigger@")
+								$value:=Replace string:C233($value;"305-4505567";"300-4505567";*)
+								
+							: ($value="@CALL-WORKER@")
+								$value:=Replace string:C233($value;"301-2896253";"301-4505558";*)
+								
+							: ($value="@PROCESS-PROPERTIES@")
+								$value:=Replace string:C233($value;"300-2896277";"301-4505296";*)
+								
+							: ($value="@transportersend@")
+								$value:=Replace string:C233($value;"transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
+								
+							: ($value="@attachmentgetContent@")
+								$value:=Replace string:C233($value;"305-4611486";"300-4611486";*)
+								
+							: ($value="@LISTBOX-INSERT-ROW@")
+								$value:=Replace string:C233($value;"LISTBOX-INSERT-ROW.301-977992";"LISTBOX-INSERT-ROWS.301-4505211";*)
+								
+							: ($value="@LISTBOX-DELETE-ROW@")
+								$value:=Replace string:C233($value;"LISTBOX-DELETE-ROW.301-977991";"LISTBOX-DELETE-ROWS.301-4505174";*)
+								
+							: ($value="@OBJECT-GET-COORDINATES@")
+								$value:=Replace string:C233($value;"300-1740286";"301-4505413";*)
+								
+							: ($value="@SET-LISTBOX-COLUMN-WIDTH@")
+								$value:=Replace string:C233($value;"SET-LISTBOX-COLUMN-WIDTH.301-206005";"LISTBOX-SET-COLUMN-WIDTH.301-4505222";*)
+								
+							: ($value="@Using-SSL-Protocol@")
+								$value:=Replace string:C233($value;"Using-SSL-Protocol.200-4650693";"Using-TLS-Protocol-HTTPS.300-4504740";*)
+								$value:=Replace string:C233($value;"Using-SSL-Protocol.300-205392";"Using-TLS-Protocol-HTTPS.300-4504740";*)
+								
+							: ($value="@4D-Environment@")
+								$value:=Replace string:C233($value;"302-4504402";"201-4504340";*)
+								
+							: ($value="@collectionquery@")
+								$value:=Replace string:C233($value;"305-4505864";"300-4505864";*)
+								
+							: ($value="@Overview-of-XML-DOM-Commands@")
+								$value:=Replace string:C233($value;"300-205309";"300-4504762";*)
+								
 						End case 
 						
 						$targetFile:=Null:C1517
 						
 						Case of 
 							: ($suffix#$lang)  //language switcher
-								
-							: ($value="@Using-4D-Server-64-bit-version-OS-X@")  //obsolete document
-							: ($value="@Using-a-64-bit-4D-Server-Windows@")  //obsolete document
-							: ($value="@User-forms@")
+							: ($value="@Changing-from-32-bit-versions-to-64-bit-versions@")
+							: ($value="@Using-4D-Server-64-bit-version-OS-X@")
+							: ($value="@Using-a-64-bit-4D-Server-Windows@")
+							: ($value="@User-forms.200-1477106@")
+							: ($value="@Overview-of-user-forms.300-1342077@")
 							: ($value="@Get-memory-leaks@")
+							: ($value="@4D-View-Pro.300-3069585@")
 							: ($value="@4D-Mobile@")
 							: ($value="@Using-Relations@")
 							: ($value="@List-box-Using-object-arrays-in-columns-4D-View-Pro@")
-								
-								
-								
+							: ($value="@Open-external-window@")
+							: ($value="@Managing-Hierarchical-List-Boxes@")
 							: ($value="@4D-ODBC-Driver@")
-							: ($value="@4D-ODBC-Pro@")  //external document
-							: ($value="@Deprecated-or-removed-features@")  //external document
-							: ($value="@4D-for-OCI@")  //external document
-							: ($value="@4D-Chart-Language@")  //external document
-								
-							: (Match regex:C1019(".*4D-Language-Reference.*";$value))  //external document (not to be confused with $anchor
-								
-							: ($value="@4D-v18x-Release-Notes@")  //external document
-								
+							: ($value="@4D-ODBC-Pro@")
+							: ($value="@Deprecated-or-removed-features@")
+							: ($value="@Deprecated-and-removed-features@")
+							: ($value="@4D-for-OCI@")
+							: ($value="@4D-Chart-Language@")
+							: (Match regex:C1019(".*4D-Language-Reference.*";$value))
+							: ($value="@4D-v18x-Release-Notes@")
+							: (Match regex:C1019("[^?]+\\?&sort=.*";$value))
 							: (Match regex:C1019("ftp.+";$value))
 							: (Match regex:C1019("http.+";$value))
 							: (Match regex:C1019("#.*";$value))
-								
 							: (Match regex:C1019("\\/Home\\.[a-z]{2}\\.html";$value))  //bad link to index
+								
+								$log:=New object:C1471
+								$log.path:=$file.path
+								$log.href:=$value
+								$params.LOG_PUSH("warning_link_to_home";$log)
 								
 							: (Match regex:C1019("\\/[^/]+\\/index\\.[a-z]{2}\\.html";$value))  //bad link to index
 								
@@ -283,8 +527,6 @@ For ($i;1;Size of array:C274($types))
 								$log.path:=$file.path
 								$log.href:=$value
 								$params.LOG_PUSH("warning_link_to_home";$log)
-								
-							: (Match regex:C1019("[^?]+\\?&sort=.*";$value))  //table header
 								
 							: (Match regex:C1019("[.]+\\/.+";$value))
 								
@@ -315,13 +557,16 @@ For ($i;1;Size of array:C274($types))
 								End if 
 								
 							: (Match regex:C1019("[^/]+\\/[^/]+\\/.+";$value))  //e.g. 4D/18/path
+								
 								$pathComponents:=Split string:C1554($value;"/")
 								$pathComponents.shift()
 								$pathComponents.shift()
 								$value:=$pathComponents.join("/";ck ignore null or empty:K85:5)
-								$targetFile:=$rootFolder.file($value)
 								
-							: (Match regex:C1019("\\/[^/]+\\/[^/]+\\/.+";$value))  //e.g. /4D/18/path
+								$targetFile:=$file.parent.file($value)  //relative path
+								
+							: (Match regex:C1019("\\/[^/]+\\/[^/]+\\/[^/]+\\/.+";$value))  //e.g. //4Dv18/4D/18/path
+								
 								$pathComponents:=Split string:C1554($value;"/")
 								$pathComponents.shift()
 								$pathComponents.shift()
@@ -389,6 +634,16 @@ For ($i;1;Size of array:C274($types))
 									End if 
 								End if 
 								
+							: (Match regex:C1019("\\/[^/]+\\/[^/]+\\/.+";$value))  //e.g. /--18/-/path, /4D/18/path
+								
+								$pathComponents:=Split string:C1554($value;"/")
+								$pathComponents.shift()
+								$pathComponents.shift()
+								$pathComponents.shift()
+								$value:=$pathComponents.join("/";ck ignore null or empty:K85:5)
+								
+								$targetFile:=$file.parent.file($value)  //relative path
+								
 							: (Match regex:C1019("\\/[^/]+\\/.+";$value))  //e.g. /4D/path
 								$pathComponents:=Split string:C1554($value;"/")
 								$pathComponents.shift()
@@ -415,6 +670,8 @@ For ($i;1;Size of array:C274($types))
 								: ($suffix#$lang)  //language switcher
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Changing-from-32-bit-versions-to-64-bit-versions@")  //obsolete document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Using-4D-Server-64-bit-version-OS-X@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
@@ -422,13 +679,19 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Using-a-64-bit-4D-Server-Windows@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@User-forms@")
+								: ($value="@User-forms.200-1477106@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@Get-memory-leaks@")
+								: ($value="@Overview-of-user-forms.300-1342077@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@4D-Mobile@")
+								: ($value="@Get-memory-leaks@")  //invalid document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@4D-View-Pro.300-3069585@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@4D-Mobile@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Using-Relations@")
@@ -437,12 +700,21 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@List-box-Using-object-arrays-in-columns-4D-View-Pro@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Open-external-window@")  //invalid document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Managing-Hierarchical-List-Boxes@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 									  //-------------
 									
 								: ($value="@4D-ODBC-Driver@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Deprecated-or-removed-features@")  //external document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Deprecated-and-removed-features@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@4D-ODBC-Pro@")  //external document
@@ -457,20 +729,21 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@4D-Chart-Language@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: (Match regex:C1019(".*4D-Language-Reference.*";$value))  //external document (not to be confused with $anchor
+								: (Match regex:C1019(".*4D-Language-Reference.*";$value))  //external document (not to be confused with SQL chapter which is lower case)
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@4D-v18x-Release-Notes@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: (Match regex:C1019("ftp.+";$value))
-								: (Match regex:C1019("http.+";$value))
-								: (Match regex:C1019("#.*";$value))
+									  //-------------
 									
-								: (Match regex:C1019("\\/Home\\.[a-z]{2}\\.html";$value))
-								: (Match regex:C1019("\\/[^/]+\\/index\\.[a-z]{2}\\.html";$value))
-								: (Match regex:C1019("\\.\\.\\/\\.\\.\\/index\\.[a-z]{2}\\.html";$value))
 								: (Match regex:C1019("[^?]+\\?&sort=.*";$value))
+								: (Match regex:C1019("ftp.+";$value))  //keep "as is"
+								: (Match regex:C1019("http.+";$value))  //keep "as is"
+								: (Match regex:C1019("#.*";$value))  //keep "as is"
+								: (Match regex:C1019("\\/Home\\.[a-z]{2}\\.html";$value))  //remove
+								: (Match regex:C1019("\\/[^/]+\\/index\\.[a-z]{2}\\.html";$value))  //remove
+								: (Match regex:C1019("\\.\\.\\/\\.\\.\\/index\\.[a-z]{2}\\.html";$value))  //remove
 								Else 
 									TRACE:C157  //$targetFile#Null
 							End case 

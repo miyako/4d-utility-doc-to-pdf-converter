@@ -15,7 +15,7 @@ links may traverse outside the base URL
 */
 
 $params.sourceIndexFolder:=Folder:C1567($path;fk platform path:K87:2)
-$params.lang:="ja"
+$params.lang:="en"
 
 /*
 export detected errors (missing link, etc)
@@ -56,11 +56,7 @@ error japanse
 $book:=$books.query("id === :1";"book_4670981")[0]  //アプリケーションビルド設定ファイル
 */
 
-/*
-
 $book:=$books.query("id === :1";"book_4504285")[0]  //ランゲージリファレンス
-
-*/
 
 /*
 for now, no major differences between languages
@@ -77,7 +73,7 @@ $params.LOG_END()
 now convert html to pdf!
 */
 
-$targetFolder:=Folder:C1567(System folder:C487(Desktop:K41:16)+"export_pdf";fk platform path:K87:2)
+$targetFolder:=Folder:C1567(System folder:C487(Desktop:K41:16)+"document-export"+Folder separator:K24:12+"export_pdf";fk platform path:K87:2)
 
 $target:=set_target ($targetFolder;$html;$book.name)
 $pdfPath:=create_pdf ($target)

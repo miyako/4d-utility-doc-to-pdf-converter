@@ -1,10 +1,25 @@
 ﻿{
-	"checked_for_log": {
+	"log": {
+		"methods": [
+			"log_end",
+			"log_push",
+			"log_start"
+		]
+	},
+	"tests": {
+		"methods": [
+			"TEST_03",
+			"TEST_04",
+			"TEST_05"
+		]
+	},
+	"v2": {
 		"methods": [
 			"anchor_name_for_file",
 			"cajole_nodes",
 			"create_book",
 			"create_chapter_page",
+			"create_chapters",
 			"create_pdf",
 			"deep_copy_node_html",
 			"get_books",
@@ -20,24 +35,6 @@
 			"parse_href",
 			"remove_iframe",
 			"set_target"
-		]
-	},
-	"log": {
-		"methods": [
-			"log_end",
-			"log_push",
-			"log_start"
-		]
-	},
-	"tests": {
-		"methods": [
-			"TEST_03",
-			"TEST_04"
-		]
-	},
-	"v2": {
-		"methods": [
-			"create_chapters"
 		]
 	},
 	"trash": {}

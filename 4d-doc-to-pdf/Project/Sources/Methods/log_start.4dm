@@ -24,6 +24,7 @@ If (Bool:C1537($params.CREATE_LOG))
 		"warning_empty_anchor";\
 		"warning_empty_div";\
 		"warning_iframe";\
+		"warning_invalid_html_tag";\
 		"error_invalid_html")
 	
 	$params.LOG_FILES:=New object:C1471

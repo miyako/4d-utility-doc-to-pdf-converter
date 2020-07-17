@@ -195,7 +195,7 @@ What-s-new.901-4611717.
 							
 							insert_h4_separator ($html)
 							
-							get_title_list ($pageDom;$book;$html)
+							get_title_list ($pageDom;$book;$html;$params)
 							
 						Else 
 							TRACE:C157  //unknown document structure
@@ -221,7 +221,7 @@ What-s-new.901-4611717.
 								
 								insert_h4_separator ($html)
 								
-								get_title_list ($pageDom;$book;$html)
+								get_title_list ($pageDom;$book;$html;$params)
 								
 							Else 
 								TRACE:C157  //unknown document structure

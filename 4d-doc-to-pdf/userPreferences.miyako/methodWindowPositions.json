@@ -1,9 +1,9 @@
 ﻿{
 	"Sources/Methods/parse_href.4dm": {
-		"left": 677,
-		"top": 174,
-		"width": 1160,
-		"height": 792
+		"left": 568,
+		"top": 107,
+		"width": 965,
+		"height": 816
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"left": 554,
@@ -48,10 +48,10 @@
 		"height": 792
 	},
 	"Sources/Methods/get_title_list.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 568,
+		"top": 133,
+		"width": 965,
+		"height": 790
 	},
 	"Sources/Methods/get_document_title.4dm": {
 		"left": 615,
@@ -78,10 +78,10 @@
 		"height": 755
 	},
 	"Sources/Methods/TEST_v2.4dm": {
-		"left": 475,
-		"top": 137,
-		"width": 1160,
-		"height": 818
+		"left": 568,
+		"top": 133,
+		"width": 965,
+		"height": 790
 	},
 	"Sources/Methods/anchor_name_for_file.4dm": {
 		"left": 688,
@@ -108,10 +108,10 @@
 		"height": 641
 	},
 	"Sources/Methods/create_chapters.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 696,
+		"top": 155,
+		"width": 895,
+		"height": 634
 	},
 	"Sources/Methods/create_book.4dm": {
 		"left": 475,
@@ -144,10 +144,10 @@
 		"height": 792
 	},
 	"Sources/Methods/log_start.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 568,
+		"top": 133,
+		"width": 965,
+		"height": 790
 	},
 	"Sources/Methods/log_end.4dm": {
 		"left": 475,
@@ -162,10 +162,10 @@
 		"height": 611
 	},
 	"Sources/Methods/log_push.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 568,
+		"top": 133,
+		"width": 965,
+		"height": 790
 	},
 	"Trash/Methods/(check_for_log).4dm": {
 		"left": 542,
@@ -180,15 +180,21 @@
 		"height": 792
 	},
 	"Sources/Methods/cajole_nodes.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 800,
+		"top": 159,
+		"width": 965,
+		"height": 790
 	},
 	"Trash/Methods/(TEST_02).4dm": {
 		"left": 529,
 		"top": 177,
 		"width": 1160,
 		"height": 792
+	},
+	"Sources/Methods/TEST_05.4dm": {
+		"left": 767,
+		"top": 167,
+		"width": 965,
+		"height": 790
 	}
 }

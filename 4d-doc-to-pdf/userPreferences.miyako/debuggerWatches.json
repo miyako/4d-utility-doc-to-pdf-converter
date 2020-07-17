@@ -1,22 +1,10 @@
 ﻿[
 	{
 		"type": 66,
-		"formula": "$title"
-	},
-	{
-		"type": 66,
-		"formula": "$stringValue"
-	},
-	{
-		"type": 66,
-		"formula": "$anchor"
-	},
-	{
-		"type": 66,
-		"formula": "$TitleTitle"
-	},
-	{
-		"type": 66,
 		"formula": "$chapterFile"
+	},
+	{
+		"type": 66,
+		"formula": "$value"
 	}
 ]
