@@ -2,16 +2,6 @@
 	"editors": [
 		{
 			"type": "method",
-			"id": 2147483627,
-			"previousTabType": "method",
-			"previousTabID": 2147483644,
-			"codeDescriptor": {
-				"type": 1,
-				"methodName": "TEST_v2"
-			}
-		},
-		{
-			"type": "method",
 			"id": 2147483644,
 			"codeDescriptor": {
 				"type": 1,

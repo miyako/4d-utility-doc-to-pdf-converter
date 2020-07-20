@@ -1,9 +1,9 @@
 ﻿{
 	"Sources/Methods/parse_href.4dm": {
-		"left": 856,
-		"top": 286,
-		"width": 861,
-		"height": 507
+		"left": 269,
+		"top": 330,
+		"width": 836,
+		"height": 697
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"left": 554,
@@ -78,10 +78,10 @@
 		"height": 755
 	},
 	"Sources/Methods/TEST_v2.4dm": {
-		"left": 827,
-		"top": 287,
-		"width": 861,
-		"height": 533
+		"left": 269,
+		"top": 356,
+		"width": 836,
+		"height": 671
 	},
 	"Sources/Methods/anchor_name_for_file.4dm": {
 		"left": 688,

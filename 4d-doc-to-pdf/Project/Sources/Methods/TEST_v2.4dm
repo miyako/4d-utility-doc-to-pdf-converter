@@ -15,7 +15,7 @@ links may traverse outside the base URL
 */
 
 $params.sourceIndexFolder:=Folder:C1567($path;fk platform path:K87:2)
-$params.lang:="fr"
+$params.lang:="de"
 
 /*
 export detected errors (missing link, etc)
@@ -36,21 +36,18 @@ $books:=get_books ($params)
 error deutsch
 */
 
-$book:=$books.query("id === :1";"book_4575411")[0]  //デザインリファレンス
 
 If (False:C215)
 /* need to fix fraçais */
+	$book:=$books.query("id === :1";"book_4672399")[0]  //4D Server
 	$book:=$books.query("id === :1";"book_5049564")[0]  //4D v18.x リリースノート
-	$book:=$books.query("id === :1";"book_4688909")[0]  //インストールガイド
+	$book:=$books.query("id === :1";"book_4688867")[0]  //4D v18への変換
 	$book:=$books.query("id === :1";"book_4650692")[0]  //SQLリファレンス
+	$book:=$books.query("id === :1";"book_4688909")[0]  //インストールガイド
 	$book:=$books.query("id === :1";"book_4611717")[0]  //SVGコンポーネント
 	$book:=$books.query("id === :1";"book_4522983")[0]  //4D Write Proリファレンス
 	$book:=$books.query("id === :1";"book_4689573")[0]  //4D Internet Commands
-	$book:=$books.query("id === :1";"book_4688867")[0]  //4D v18への変換
-	$book:=$books.query("id === :1";"book_4672399")[0]  //4D Server
-	
-	
-	
+	$book:=$books.query("id === :1";"book_4575411")[0]  //デザインリファレンス
 	$book:=$books.query("id === :1";"book_4504285")[0]  //ランゲージリファレンス
 	$book:=$books.query("id === :1";"book_4690706")[0]  //4D Widgets（ウィジェット）
 	$book:=$books.query("id === :1";"book_4691266")[0]  //4D for iOS
@@ -60,8 +57,9 @@ If (False:C215)
 	$book:=$books.query("id === :1";"book_4688969")[0]  //4D for OCI
 	$book:=$books.query("id === :1";"book_4522233")[0]  //4D View Pro リファレンス
 	$book:=$books.query("id === :1";"book_4670981")[0]  //アプリケーションビルド設定ファイル
-	$book:=$books.query("id === :1";"book_4673706")[0]  //バックアップ設定ファイル
 End if 
+
+$book:=$books.query("id === :1";"book_4673706")[0]  //バックアップ設定ファイル
 
 /*
 for now, no major differences between languages

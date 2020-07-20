@@ -64,9 +64,9 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Deprecated-or-removed-features@")
 								  //redirect to current version
+								$value:=Replace string:C233($value;"-in-v18-product-range";"";*)
 								$value:=Replace string:C233($value;"4822814";"5049565";*)
 								$value:=Replace string:C233($value;"4969974";"5049565";*)
-								$value:=Replace string:C233($value;"-in-v18-product-range";"";*)
 								$value:=Replace string:C233($value;"4605463";"5049565";*)
 								
 							: ($value="@18/Changes-and-updates@")
@@ -82,16 +82,33 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"4822815";"5049567";*)
 								$value:=Replace string:C233($value;"4969976";"5049567";*)
 								
+							: ($value="@Documents-precedents@")
+								  //redirect to current version
+								$value:=Replace string:C233($value;"4822815";"5049567";*)
+								$value:=Replace string:C233($value;"4969976";"5049567";*)
+								
 							: ($value="@WP-EXPORT-DOCUMENT@")
+								$value:=Replace string:C233($value;"1863636";"4523015";*)
+								
+							: ($value="@WP-EXPORTER-DOCUMENT@")
 								$value:=Replace string:C233($value;"1863636";"4523015";*)
 								
 							: ($value="@WP-EXPORT-VARIABLE@")
 								$value:=Replace string:C233($value;"1863643";"4523019";*)
 								
+							: ($value="@WP-EXPORTER-VARIABLE@")
+								$value:=Replace string:C233($value;"1863643";"4523019";*)
+								
 							: ($value="@WP-Import-document@")
 								$value:=Replace string:C233($value;"1863649";"4523016";*)
 								
+							: ($value="@WP-Importer-document@")
+								$value:=Replace string:C233($value;"1863649";"4523016";*)
+								
 							: ($value="@WP-New@")
+								$value:=Replace string:C233($value;"1863656";"4523032";*)
+								
+							: ($value="@WP-Nouveau@")
 								$value:=Replace string:C233($value;"1863656";"4523032";*)
 								
 							: ($value="@WP-Create-subsection@")
@@ -166,6 +183,9 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Configuration-preferences@")
 								$value:=Replace string:C233($value;"Configuration-preferences.300-845386";"Network-and-Client-Server-options.300-4672425";*)
 								
+							: ($value="@Options-reseau-et-Client-serveur@")
+								$value:=Replace string:C233($value;"Options-reseau-et-Client-serveur.300-845386";"Options-reseau-et-Client-serveur.300-4672425";*)
+								
 							: ($value="@Monitor-Page@")
 								$value:=Replace string:C233($value;"845382";"4672430";*)
 								
@@ -173,6 +193,9 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"845381";"4672436";*)
 								
 							: ($value="@GET-ACTIVITY-SNAPSHOT@")
+								$value:=Replace string:C233($value;"300-1526735";"301-4504929";*)
+								
+							: ($value="@LIRE-APERCU-ACTIVITE@")
 								$value:=Replace string:C233($value;"300-1526735";"301-4504929";*)
 								
 							: ($value="@Stored-Procedures@")
@@ -204,6 +227,9 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Quick-reports@")
 								$value:=Replace string:C233($value;"3962803";"4575452";*)
 								
+							: ($value="@Etats-rapides@")
+								$value:=Replace string:C233($value;"3962803";"4575452";*)
+								
 							: ($value="@Schnellberichte@")
 								$value:=Replace string:C233($value;"3962803";"4575452";*)
 								
@@ -215,6 +241,9 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Principles-for-integrating-4D-and-the-4D-SQL-engine@")
 								$value:=Replace string:C233($value;"Principles-for-integrating-4D-and-the-4D-SQL-engine.300-72604";"4D-SQL-engine-implementation.300-4650700";*)
+								
+							: ($value="@Implementations-du-moteur-SQL-de-4D@")
+								$value:=Replace string:C233($value;"Implementations-du-moteur-SQL-de-4D.300-72604";"Implementations-du-moteur-SQL-de-4D.300-4650700";*)
 								
 							: ($value="@SMTP-transportersend@")
 								$value:=Replace string:C233($value;"SMTP-transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
@@ -240,8 +269,17 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Feldeigenschaften@")
 								$value:=Replace string:C233($value;"1477337";"4575567";*)
 								
+							: ($value="@Proprietes-des-champs@")
+								$value:=Replace string:C233($value;"1477337";"4575567";*)
+								
+							: ($value="@Proprietes-des-tables@")
+								$value:=Replace string:C233($value;"4575566";"4575566";*)
+								
 							: ($value="@IP-Configuration@")
 								$value:=Replace string:C233($value;"IP-Configuration.300-845391";"IP-Settings.300-4672424";*)
+								
+							: ($value="@Configuration-IP@")
+								$value:=Replace string:C233($value;"Configuration-IP.300-845391";"Reglages-IP.300-4672424";*)
 								
 							: ($value="@Web-server-configuration-and-connection-management@")
 								$value:=Replace string:C233($value;"977167";"4504720";*)
@@ -271,6 +309,14 @@ For ($i;1;Size of array:C274($types))
 									$value:=Replace string:C233($value;"Erweiterte-Command-Line-Interface-CLI.300-1570420";"Command-Line-Interface.300-4575704";*)
 								End if 
 								
+							: ($value="@Interface-ligne-de-commande-CLI-etendue.300-1570420@")
+								
+								If ($file.name="@300-4575466@")
+									  //bad link in source
+								Else 
+									$value:=Replace string:C233($value;"Interface-ligne-de-commande-CLI-etendue.300-1570420";"Interface-ligne-de-commande.300-4575704";*)
+								End if 
+								
 							: ($value="@dataStoreprovideDataKey@")
 								$value:=Replace string:C233($value;"dataStoreprovideDataKey.305-4505925";"dataStoreprovideDataKey.300-4505925";*)
 								
@@ -288,6 +334,9 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@4D-Datenfeldtypen@")
 								$value:=Replace string:C233($value;"1477338";"4575568";*)
 								
+							: ($value="@Types-de-champs-4D@")
+								$value:=Replace string:C233($value;"1477338";"4575568";*)
+								
 							: ($value="@Label-editor@")
 								$value:=Replace string:C233($value;"1477096";"4575451";*)
 								
@@ -303,10 +352,19 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Label-editor@")
 								$value:=Replace string:C233($value;"1477096";"4575451";*)
 								
+							: ($value="@Editeur-d-etiquettes@")
+								$value:=Replace string:C233($value;"1477096";"4575451";*)
+								
+							: ($value="@Exploitation-des-liens@")
+								$value:=Replace string:C233($value;"Exploitation-des-liens.200-1517499";"Proprietes-des-liens.300-4575565";*)
+								
 							: ($value="@List-subforms@")
 								$value:=Replace string:C233($value;"1016001";"4575635";*)
 								
 							: ($value="@Unterformulare-als-Liste@")
+								$value:=Replace string:C233($value;"1016001";"4575635";*)
+								
+							: ($value="@Sous-formulaires-en-liste@")
 								$value:=Replace string:C233($value;"1016001";"4575635";*)
 								
 							: ($value="@SQL-Server-Page@")
@@ -352,6 +410,9 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Datenbankmethode-On-Web-Authentication.300-977165@")
 								$value:=Replace string:C233($value;"Datenbankmethode-On-Web-Authentication.300-977165";"Datenbankmethode-On-Web-Authentication.301-4505012";*)
+								
+							: ($value="@Methode-base-Sur-authentification-Web.300-977165@")
+								$value:=Replace string:C233($value;"Methode-base-Sur-authentification-Web.300-977165";"Methode-base-Sur-authentification-Web.301-4505012";*)
 								
 							: ($value="@Datenbankmethode-On-Web-Authentication.300-205400@")
 								$value:=Replace string:C233($value;"Datenbankmethode-On-Web-Authentication.300-205400";"Datenbankmethode-On-Web-Authentication.300-4504707";*)
@@ -451,6 +512,12 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@PAGE-SETUP@")
 								$value:=Replace string:C233($value;"PAGE-SETUP.301-977802";"o-PAGE-SETUP.301-4505822";*)
 								
+							: ($value="@UTILISER-PARAMETRES-IMPRESSION@")
+								$value:=Replace string:C233($value;"UTILISER-PARAMETRES-IMPRESSION.301-977802";"o-UTILISER-PARAMETRES-IMPRESSION.301-4505822";*)
+								
+							: ($value="@FORMULAIRE-ENTREE@")
+								$value:=Replace string:C233($value;"FORMULAIRE-ENTREE.301-206114";"FORM-FIXER-ENTREE.301-4505766";*)
+								
 							: ($value="@INPUT-FORM@")
 								$value:=Replace string:C233($value;"INPUT-FORM.301-206114";"FORM-SET-INPUT.301-4505766";*)
 								
@@ -460,8 +527,17 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@ADD-SUBRECORD@")
 								$value:=Replace string:C233($value;"ADD-SUBRECORD.301-206192";"o-ADD-SUBRECORD.301-4506007";*)
 								
+							: ($value="@AJOUTER-SOUS-ENREGISTREMENT@")
+								$value:=Replace string:C233($value;"AJOUTER-SOUS-ENREGISTREMENT.301-206192";"o-AJOUTER-SOUS-ENREGISTREMENT.301-4506007";*)
+								
+							: ($value="@C-GRAPHE@")
+								$value:=Replace string:C233($value;"C-GRAPHE.301-206209";"o-C-GRAPHE.301-4506032";*)
+								
 							: ($value="@MODIFY-SUBRECORD@")
 								$value:=Replace string:C233($value;"MODIFY-SUBRECORD.301-206191";"o-MODIFY-SUBRECORD.301-4506008";*)
+								
+							: ($value="@MODIFIER-SOUS-ENREGISTREMENT@")
+								$value:=Replace string:C233($value;"MODIFIER-SOUS-ENREGISTREMENT.301-206191";"o-MODIFIER-SOUS-ENREGISTREMENT.301-4506008";*)
 								
 							: ($value="@FORM-GET-PARAMETER@")
 								$value:=Replace string:C233($value;"FORM-GET-PARAMETER.301-978100";"o-FORM-GET-PARAMETER.301-4506030";*)
@@ -677,9 +753,20 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Installationshandbuch@")
 								$value:=Replace string:C233($value;"100-4844794";"100-4688909";*)
 								
+							: ($value="@Installation@")
+								$value:=Replace string:C233($value;"100-4844794";"100-4688909";*)
+								
 							: ($value="@18/Anderungen-und-Aktualisierungen@")
 								$value:=Replace string:C233($value;"18/Anderungen-und-Aktualisierungen.200-4822816";"18.2/Anderungen-und-Aktualisierungen.200-5049566";*)
 								$value:=Replace string:C233($value;"18/Anderungen-und-Aktualisierungen.200-4969975";"18.2/Anderungen-und-Aktualisierungen.200-5049566";*)
+								
+							: ($value="@18/Modifications-et-mises-a-jour@")
+								$value:=Replace string:C233($value;"18/Modifications-et-mises-a-jour.200-4822816";"18.2/Modifications-et-mises-a-jour.200-5049566";*)
+								$value:=Replace string:C233($value;"18/Modifications-et-mises-a-jour.200-4969975";"18.2/Modifications-et-mises-a-jour.200-5049566";*)
+								
+							: ($value="@18.1/Modifications-et-mises-a-jour@")
+								$value:=Replace string:C233($value;"18.1/Modifications-et-mises-a-jour.200-4822816";"18.2/Modifications-et-mises-a-jour.200-5049566";*)
+								$value:=Replace string:C233($value;"18.1/Modifications-et-mises-a-jour.200-4969975";"18.2/Modifications-et-mises-a-jour.200-5049566";*)
 								
 								  //: ($value="@Anderungen-und-Aktualisierungen@")
 								  //$value:=Replace string($value;"200-4822816";"200-5049566";*)
@@ -716,6 +803,25 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Methode-base-Sur-authentification-Web.300-976978@")
 								$value:=Replace string:C233($value;"300-976978";"300-4504707";*)
 								
+							: ($value="@o-OBJET-FIXER-COULEUR@")
+								
+							: ($value="@OBJET-FIXER-COULEUR@")
+								$value:=Replace string:C233($value;"OBJET-FIXER-COULEUR.301-4505453";"o-OBJET-FIXER-COULEUR.301-4505453";*)
+								
+							: ($value="@APPELER-PROCESS@")
+								$value:=Replace string:C233($value;"APPELER-PROCESS.301-977781";"GENERER-APPEL-EXTERIEUR.301-4505034";*)
+								
+							: ($value="@OBJET-FIXER-NOM-ENUMERATION@")
+								$value:=Replace string:C233($value;"OBJET-FIXER-NOM-ENUMERATION.301-977902";"OBJET-FIXER-LISTE-PAR-NOM.301-4505451";*)
+								
+							: ($value="@Pendant@")
+								$value:=Replace string:C233($value;"Pendant.301-978118";"o-Pendant.301-4506000";*)
+								
+							: ($value="@REDESSINER-LISTE.301-978086@")
+								$value:=Replace string:C233($value;"REDESSINER-LISTE.301-978086";"o-REDESSINER-LISTE.301-4506029";*)
+								
+							: ($value="@Configuration-and-trace-files.300-4575598.de@")
+								$value:=Replace string:C233($value;"Configuration-and-trace-files.300-4575598";"Konfiguration-und-Dateien-verfolgen.300-4575598";*)
 								
 						End case 
 						
@@ -723,7 +829,12 @@ For ($i;1;Size of array:C274($types))
 						
 						Case of 
 							: ($suffix#$lang)  //language switcher
+								
+							: ($value="@INVERSER-FOND@")
+							: ($value="@AJOUTER-SEGMENT-DE-DONNEES@")
+							: ($value="@Utiliser-4D-Server-64-bits-Windows@")
 							: ($value="@Changing-from-32-bit-versions-to-64-bit-versions@")
+							: ($value="@Utiliser-4D-Server-64-bits-OS-X@")
 							: ($value="@Using-4D-Server-64-bit-version-OS-X@")
 							: ($value="@Using-a-64-bit-4D-Server-Windows@")
 							: ($value="@4D-Server-64-bit-fur-OS-X-verwenden@")
@@ -734,13 +845,14 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Hierarchische-Listboxen-verwalten@")
 							: ($value="@Erweiterte-Command-Line-Interface-CLI@") & ($file.name="@300-4575466@")
 							: ($value="@Command-Line-Interface-extended@") & ($file.name="@300-4575466@")
+							: ($value="@Interface-ligne-de-commande-CLI-etendue@") & ($file.name="@300-4575466@")
 							: ($value="@Fonctionnalites-obsoletes-ou-supprimees@")
 							: ($value="@Plugins.300-3610991@")
 							: ($value="@Presentation-des-formulaires-utilisateurs.300-1342077@")
 							: ($value="@Passer-de-32-bits-a-64-bits@")
 							: ($value="@Gestion-des-List-box-hierarchiques@")
-								
-								
+							: ($value="@Formulaires-utilisateurs.200-1477106@")
+							: ($value="@List-box-Utiliser-des-tableaux-objets-dans-les-colonnes-4D-View-Pro@")
 							: ($value="@Die-4D-Datenbank-konfigurieren@")
 							: ($value="@Listbox-Objekt-Arrays-in-Spalten-verwenden-4D-View-Pro@")
 							: ($value="@Benutzerformulare.200-1477106@")
@@ -753,12 +865,15 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Verknupfungen-verwenden@")
 							: ($value="@List-box-Using-object-arrays-in-columns-4D-View-Pro@")
 							: ($value="@Open-external-window@")
+							: ($value="@Creer-fenetre-externe@")
 							: ($value="@Managing-Hierarchical-List-Boxes@")
 							: ($value="@4D-ODBC-Driver@")
 							: ($value="@4D-ODBC-Pro@")
-							: ($value="@Deprecated-or-removed-features@")
+								  //: ($value="@Deprecated-or-removed-features@")
+							: ($value="@Alignement-objet.302-977619@")
 							: ($value="@Deprecated-and-removed-features@")
 							: ($value="@4D-for-OCI@")
+							: ($value="@4D-Chart.100-70986@")
 							: ($value="@4D-Chart-Language@")
 							: ($value="@4D-Chart-Programmiersprache@")
 							: ($value="@4D-Programmiersprache-18@")
@@ -1016,16 +1131,17 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Passer-de-32-bits-a-64-bits@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-									  //-------------
-									
 								: ($value="@4D-ODBC-Driver@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@Deprecated-or-removed-features@")  //external document
+								: ($value="@List-box-Utiliser-des-tableaux-objets-dans-les-colonnes-4D-View-Pro@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@Deprecated-or-removed-features@")  //external document
+								: ($value="@Deprecated-and-removed-features@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+									  //: ($value="@Deprecated-or-removed-features@")  //external document
+									  //DOM SET XML ATTRIBUTE($dom;"href";"")
 									
 								: ($value="@Fonctionnalites-obsoletes-ou-supprimees@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
@@ -1045,7 +1161,25 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@4D-Chart-Programmiersprache@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Interface-ligne-de-commande-CLI-etendue@") & ($file.name="@300-4575466@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@4D-Programmiersprache-18@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@4D-Chart.100-70986@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Utiliser-4D-Server-64-bits-OS-X@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Utiliser-4D-Server-64-bits-Windows@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Creer-fenetre-externe@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@INVERSER-FOND@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: (Match regex:C1019(".*4D-Language-Reference.*";$value))  //external document (not to be confused with SQL chapter which is lower case)
@@ -1055,6 +1189,15 @@ For ($i;1;Size of array:C274($types))
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@4D-v18x-Release-Notes@")  //external document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Formulaires-utilisateurs.200-1477106@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Alignement-objet.302-977619@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@AJOUTER-SEGMENT-DE-DONNEES@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 									  //-------------
