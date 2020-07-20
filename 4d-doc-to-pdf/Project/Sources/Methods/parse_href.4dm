@@ -185,10 +185,17 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Label-editor-redesign@")
 								$value:=Replace string:C233($value;"Label-editor-redesign.300-2899033";"Label-editor.200-4575451";*)
 								
+							: ($value="@Etiketteneditor@")
+								$value:=Replace string:C233($value;"300-2899033";"200-4575451";*)
+								$value:=Replace string:C233($value;"200-1477096";"200-4575451";*)
+								
 							: ($value="@Quick-Report-editor-redesign@")
 								$value:=Replace string:C233($value;"Quick-Report-editor-redesign.300-2899027";"Quick-reports.200-4575452";*)
 								
 							: ($value="@Quick-reports@")
+								$value:=Replace string:C233($value;"3962803";"4575452";*)
+								
+							: ($value="@Schnellberichte@")
 								$value:=Replace string:C233($value;"3962803";"4575452";*)
 								
 							: ($value="@VP-EXPORT-DOCUMENT@")
@@ -212,6 +219,9 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Field-properties@")
 								$value:=Replace string:C233($value;"1477337";"4575567";*)
 								
+							: ($value="@Feldeigenschaften@")
+								$value:=Replace string:C233($value;"1477337";"4575567";*)
+								
 							: ($value="@IP-Configuration@")
 								$value:=Replace string:C233($value;"IP-Configuration.300-845391";"IP-Settings.300-4672424";*)
 								
@@ -219,8 +229,25 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"977167";"4504720";*)
 								$value:=Replace string:C233($value;"300-205403";"300-4504720";*)
 								
+							: ($value="@Web-Server-konfigurieren-und-Verbindung-verwalten@")
+								$value:=Replace string:C233($value;"977167";"4504720";*)
+								$value:=Replace string:C233($value;"300-205403";"300-4504720";*)
+								
 							: ($value="@Command-Line-Interface-extended@")
-								$value:=Replace string:C233($value;"Command-Line-Interface-extended.300-1570420";"Command-Line-Interface.300-4575704";*)
+								
+								If ($file.name="@300-4575466@")
+									  //bad link in source
+								Else 
+									$value:=Replace string:C233($value;"Command-Line-Interface-extended.300-1570420";"Command-Line-Interface.300-4575704";*)
+								End if 
+								
+							: ($value="@Erweiterte-Command-Line-Interface-CLI@")
+								
+								If ($file.name="@300-4575466@")
+									  //bad link in source
+								Else 
+									$value:=Replace string:C233($value;"Erweiterte-Command-Line-Interface-CLI.300-1570420";"Command-Line-Interface.300-4575704";*)
+								End if 
 								
 							: ($value="@dataStoreprovideDataKey@")
 								$value:=Replace string:C233($value;"dataStoreprovideDataKey.305-4505925";"dataStoreprovideDataKey.300-4505925";*)
@@ -230,6 +257,9 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"977166";"4504721";*)
 								
 							: ($value="@4D-field-types@")
+								$value:=Replace string:C233($value;"1477338";"4575568";*)
+								
+							: ($value="@4D-Datenfeldtypen@")
 								$value:=Replace string:C233($value;"1477338";"4575568";*)
 								
 							: ($value="@Label-editor@")
@@ -250,14 +280,23 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@List-subforms@")
 								$value:=Replace string:C233($value;"1016001";"4575635";*)
 								
+							: ($value="@Unterformulare-als-Liste@")
+								$value:=Replace string:C233($value;"1016001";"4575635";*)
+								
 							: ($value="@SQL-Server-Page@")
 								$value:=Replace string:C233($value;"845377";"4672435";*)
+								
+							: ($value="@Seite-SQL@")
+								$value:=Replace string:C233($value;"Seite-SQL-page.300-4575466";"Seite-SQL.300-4575466";*)
 								
 							: ($value="@ForEnd-for@")
 								$value:=Replace string:C233($value;"978013";"4505539";*)
 								
 							: ($value="@Appendix-E-Description-of-log-files@")
 								$value:=Replace string:C233($value;"Appendix-E-Description-of-log-files.300-3188166";"Description-of-log-files.300-4575486";*)
+								
+							: ($value="@Anhang-E-Beschreibung-der-Protokolldateien@")
+								$value:=Replace string:C233($value;"Anhang-E-Beschreibung-der-Protokolldateien.300-3188166";"Beschreibung-der-Logbucher.300-4575486";*)
 								
 							: ($value="@E.300-3188166@")
 								$value:=Replace string:C233($value;"E.300-3188166";"Description-of-log-files.300-4575486";*)
@@ -273,6 +312,27 @@ For ($i;1;Size of array:C274($types))
 								
 							: ($value="@Web.300-4504709@")
 								$value:=Replace string:C233($value;"Web.300-4504709";"Web-Server-Settings.300-4504709";*)
+								
+							: ($value="@Datenbankmethode-On-Server-Startup@")
+								$value:=Replace string:C233($value;"Datenbankmethode-On-Server-Startup-Database-Method.301-4672407";"Datenbankmethode-On-Server-Startup.301-4672407";*)
+								
+							: ($value="@Datenbankmethode-On-Server-Close-Connection@")
+								$value:=Replace string:C233($value;"Datenbankmethode-On-Server-Close-Connection.301-67449";"Datenbankmethode-On-Server-Close-Connection.301-4672409";*)
+								
+							: ($value="@Datenbankmethode-On-Server-Open-Connection@")
+								$value:=Replace string:C233($value;"Datenbankmethode-On-Server-Open-Connection.301-67450";"Datenbankmethode-On-Server-Open-Connection.301-4505000";*)
+								
+							: ($value="@Datenbankmethode-On-Web-Authentication.300-977165@")
+								$value:=Replace string:C233($value;"Datenbankmethode-On-Web-Authentication.300-977165";"Datenbankmethode-On-Web-Authentication.301-4505012";*)
+								
+							: ($value="@Datenbankmethode-On-Web-Authentication.300-205400@")
+								$value:=Replace string:C233($value;"Datenbankmethode-On-Web-Authentication.300-205400";"Datenbankmethode-On-Web-Authentication.300-4504707";*)
+								
+							: ($value="@New-Formula.301-4505749@")
+								$value:=Replace string:C233($value;"New-Formula.301-4505749";"Formula.301-4505749";*)
+								
+							: ($value="@4D/11.6/Einfuhrung-in-Trigger@")
+								$value:=Replace string:C233($value;"300-205498";"300-4504565";*)
 								
 							: ($value="@On-Server-Startup.301-4672407@")
 								$value:=Replace string:C233($value;"On-Server-Startup.301-4672407";"On-Server-Startup-Database-Method.301-4672407";*)
@@ -320,10 +380,16 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Multi-style-Rich-text-area@")
 								$value:=Replace string:C233($value;"1477147";"4575616";*)
 								
+							: ($value="@Text-mit-Stil-Rich-Text@")
+								$value:=Replace string:C233($value;"1477147";"4575616";*)
+								
 							: ($value="@QUERY-BY-ATTRIBUTE@")
 								$value:=Replace string:C233($value;"1477147";"4575616";*)
 								
 							: ($value="@/Storing-4D-Write-Pro-documents-in-4D-Object-fields@")
+								$value:=Replace string:C233($value;"300-2584906";"200-4522987";*)
+								
+							: ($value="@/4D-Write-Pro-Dokumente-in-4D-Objektfeldern-speichern@")
 								$value:=Replace string:C233($value;"300-2584906";"200-4522987";*)
 								
 							: ($value="@collectionpush@")
@@ -477,6 +543,43 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Overview-of-XML-DOM-Commands@")
 								$value:=Replace string:C233($value;"300-205309";"300-4504762";*)
 								
+							: ($value="@4D-SQL-engine-implementation.300-4650700.de.html@")
+								$value:=Replace string:C233($value;".de.";".en.";*)
+								
+							: ($value="@Installationshandbuch@")
+								$value:=Replace string:C233($value;"100-4844794";"100-4688909";*)
+								
+							: ($value="@18/Anderungen-und-Aktualisierungen@")
+								$value:=Replace string:C233($value;"18/Anderungen-und-Aktualisierungen.200-4822816";"18.2/Anderungen-und-Aktualisierungen.200-5049566";*)
+								$value:=Replace string:C233($value;"18/Anderungen-und-Aktualisierungen.200-4969975";"18.2/Anderungen-und-Aktualisierungen.200-5049566";*)
+								
+								  //: ($value="@Anderungen-und-Aktualisierungen@")
+								  //$value:=Replace string($value;"200-4822816";"200-5049566";*)
+								  //$value:=Replace string($value;"200-4969975";"200-5049566";*)
+								
+							: ($value="@Anderungen-in-der-Produktreihe@")
+								$value:=Replace string:C233($value;"Anderungen-in-der-Produktreihe-v18.200-4605463";"Anwendungen-in-Projekte-umwandeln.300-4606146";*)
+								
+							: ($value="@18/Uberholte-und-entfernte-Funktionalitaten@")
+								$value:=Replace string:C233($value;"18/Uberholte-und-entfernte-Funktionalitaten.200-4822814";"18.2/Uberholte-und-entfernte-Funktionalitaten.200-5049565";*)
+								$value:=Replace string:C233($value;"18/Uberholte-und-entfernte-Funktionalitaten.200-4969974";"18.2/Uberholte-und-entfernte-Funktionalitaten.200-5049565";*)
+								
+							: ($value="@4D-Write-Pro-Oberflache@")
+								$value:=Replace string:C233($value;"4D-Write-Pro-Oberflache.300-1864323";"4D-Write-Pro-Bereich-verwenden.200-4522988";*)
+								
+							: ($value="@Anhang-Hilfsmittel-beim-Konvertieren@")
+								$value:=Replace string:C233($value;"Anhang-Hilfsmittel-beim-Konvertieren.200-2291163";"Anhang-Hilfreiche-Methoden-fur-die-Konvertierung.200-4688878";*)
+								
+							: ($value="@LDAP-LOGOUT@")
+								$value:=Replace string:C233($value;"LDAP-LOGOUT.301-2005971";"LDAP-LOGOUT.301-4505638";*)
+								
+							: ($value="@Neue-Eigenschaft-Eckradius-fur-abgerundete-Vierecke@")
+								$value:=Replace string:C233($value;"Neue-Eigenschaft-Eckradius-fur-abgerundete-Vierecke.300-1629349";"Objekteigenschaften-setzen.300-4575725";*)
+								
+							: ($value="@OBJECT-SET-CORNER-RADIUS.301-1629493@")
+								$value:=Replace string:C233($value;"OBJECT-SET-CORNER-RADIUS.301-1629493";"OBJECT-SET-CORNER-RADIUS.301-4505427";*)
+								
+								
 						End case 
 						
 						$targetFile:=Null:C1517
@@ -486,12 +589,25 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Changing-from-32-bit-versions-to-64-bit-versions@")
 							: ($value="@Using-4D-Server-64-bit-version-OS-X@")
 							: ($value="@Using-a-64-bit-4D-Server-Windows@")
+							: ($value="@4D-Server-64-bit-fur-OS-X-verwenden@")
+							: ($value="@Einen-64-bit-4D-Server-Windows-einsetzen@")
+							: ($value="@Gruppierte-rollbare-Bereiche@")
+							: ($value="@Von-32-bit-Versionen-auf-64-bit-Versionen-wechseln@")
+							: ($value="@Einfuhrung-in-Benutzerformulare.300-1342077@")
+							: ($value="@Hierarchische-Listboxen-verwalten@")
+							: ($value="@Erweiterte-Command-Line-Interface-CLI@") & ($file.name="@300-4575466@")
+							: ($value="@Command-Line-Interface-extended@") & ($file.name="@300-4575466@")
+								
+							: ($value="@Die-4D-Datenbank-konfigurieren@")
+							: ($value="@Listbox-Objekt-Arrays-in-Spalten-verwenden-4D-View-Pro@")
+							: ($value="@Benutzerformulare.200-1477106@")
 							: ($value="@User-forms.200-1477106@")
 							: ($value="@Overview-of-user-forms.300-1342077@")
 							: ($value="@Get-memory-leaks@")
 							: ($value="@4D-View-Pro.300-3069585@")
 							: ($value="@4D-Mobile@")
 							: ($value="@Using-Relations@")
+							: ($value="@Verknupfungen-verwenden@")
 							: ($value="@List-box-Using-object-arrays-in-columns-4D-View-Pro@")
 							: ($value="@Open-external-window@")
 							: ($value="@Managing-Hierarchical-List-Boxes@")
@@ -501,6 +617,9 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Deprecated-and-removed-features@")
 							: ($value="@4D-for-OCI@")
 							: ($value="@4D-Chart-Language@")
+							: ($value="@4D-Chart-Programmiersprache@")
+							: ($value="@4D-Programmiersprache-18@")
+							: (Match regex:C1019(".*Vorherige-Dokumente.*";$value))
 							: (Match regex:C1019(".*4D-Language-Reference.*";$value))
 							: ($value="@4D-v18x-Release-Notes@")
 							: (Match regex:C1019("[^?]+\\?&sort=.*";$value))
@@ -673,16 +792,28 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Changing-from-32-bit-versions-to-64-bit-versions@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Von-32-bit-Versionen-auf-64-bit-Versionen-wechseln@")  //obsolete document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@Using-4D-Server-64-bit-version-OS-X@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@4D-Server-64-bit-fur-OS-X-verwenden@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@Using-a-64-bit-4D-Server-Windows@")  //obsolete document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Einen-64-bit-4D-Server-Windows-einsetzen@")  //obsolete document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@User-forms.200-1477106@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Overview-of-user-forms.300-1342077@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Einfuhrung-in-Benutzerformulare.300-1342077@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Get-memory-leaks@")  //invalid document
@@ -700,10 +831,34 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@List-box-Using-object-arrays-in-columns-4D-View-Pro@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Listbox-Objekt-Arrays-in-Spalten-verwenden-4D-View-Pro@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@Open-external-window@")  //invalid document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@Managing-Hierarchical-List-Boxes@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Hierarchische-Listboxen-verwalten@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Gruppierte-rollbare-Bereiche@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Benutzerformulare.200-1477106@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Erweiterte-Command-Line-Interface-CLI@") & ($file.name="@300-4575466@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Command-Line-Interface-extended@") & ($file.name="@300-4575466@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Die-4D-Datenbank-konfigurieren@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Verknupfungen-verwenden@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 									  //-------------
@@ -729,7 +884,16 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@4D-Chart-Language@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@4D-Chart-Programmiersprache@")  //external document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@4D-Programmiersprache-18@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: (Match regex:C1019(".*4D-Language-Reference.*";$value))  //external document (not to be confused with SQL chapter which is lower case)
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: (Match regex:C1019(".*Vorherige-Dokumente.*";$value))  //external document (not to be confused with SQL chapter which is lower case)
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@4D-v18x-Release-Notes@")  //external document

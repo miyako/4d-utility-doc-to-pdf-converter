@@ -54,6 +54,8 @@ If (OK=1)
 					  //link to other document; skip it
 				: ($href="@Alphabetical-list-of-commands@")
 					  //skip  abc list
+				: ($href="@Alphabetische-Liste-der-Befehle@")
+					
 				Else 
 					C_OBJECT:C1216($chapterFile)
 					$chapterFile:=File:C1566($href)

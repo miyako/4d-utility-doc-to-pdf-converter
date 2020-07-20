@@ -1,9 +1,9 @@
 ﻿{
 	"Sources/Methods/parse_href.4dm": {
-		"left": 568,
-		"top": 107,
-		"width": 965,
-		"height": 816
+		"left": 896,
+		"top": 252,
+		"width": 745,
+		"height": 727
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"left": 554,
@@ -48,8 +48,8 @@
 		"height": 792
 	},
 	"Sources/Methods/get_title_list.4dm": {
-		"left": 568,
-		"top": 133,
+		"left": 670,
+		"top": 289,
 		"width": 965,
 		"height": 790
 	},
@@ -78,10 +78,10 @@
 		"height": 755
 	},
 	"Sources/Methods/TEST_v2.4dm": {
-		"left": 568,
-		"top": 133,
-		"width": 965,
-		"height": 790
+		"left": 896,
+		"top": 226,
+		"width": 745,
+		"height": 753
 	},
 	"Sources/Methods/anchor_name_for_file.4dm": {
 		"left": 688,
@@ -108,10 +108,10 @@
 		"height": 641
 	},
 	"Sources/Methods/create_chapters.4dm": {
-		"left": 696,
-		"top": 155,
-		"width": 895,
-		"height": 634
+		"left": 670,
+		"top": 289,
+		"width": 965,
+		"height": 790
 	},
 	"Sources/Methods/create_book.4dm": {
 		"left": 475,
@@ -132,10 +132,10 @@
 		"height": 594
 	},
 	"Sources/Methods/get_title_list_for_constants.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 670,
+		"top": 289,
+		"width": 965,
+		"height": 790
 	},
 	"Sources/Methods/remove_iframe.4dm": {
 		"left": 475,
