@@ -103,10 +103,19 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@WP-GET-ATTRIBUTES@")
 								$value:=Replace string:C233($value;"2706357";"4523013";*)
 								
+							: ($value="@WP-LIRE-ATTRIBUTS@")
+								$value:=Replace string:C233($value;"2706357";"4523013";*)
+								
 							: ($value="@WP-SET-ATTRIBUTES@")
 								$value:=Replace string:C233($value;"2706358";"4523014";*)
 								
+							: ($value="@WP-FIXER-ATTRIBUTS@")
+								$value:=Replace string:C233($value;"2706358";"4523014";*)
+								
 							: ($value="@FONT-STYLE-LIST@")
+								$value:=Replace string:C233($value;"2787404";"4505606";*)
+								
+							: ($value="@LISTE-STYLES-POLICE@")
 								$value:=Replace string:C233($value;"2787404";"4505606";*)
 								
 							: ($value="@On-Server-Open-Connection-Database-Method@")
@@ -210,11 +219,20 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@SMTP-transportersend@")
 								$value:=Replace string:C233($value;"SMTP-transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
 								
+							: ($value="@SMTP-transporteursend@")
+								$value:=Replace string:C233($value;"SMTP-transporteursend.305-4505974";"SMTP-transporteursend.300-4505974";*)
+								
 							: ($value="@SMTP-transportercheckConnection.305-4505971@")
 								$value:=Replace string:C233($value;"SMTP-transportercheckConnection.305-4505971";"SMTP-transportercheckConnection.300-4505971";*)
 								
+							: ($value="@SMTP-transporteurcheckConnection.305-4505971@")
+								$value:=Replace string:C233($value;"SMTP-transporteurcheckConnection.305-4505971";"SMTP-transporteurcheckConnection.300-4505971";*)
+								
 							: ($value="@transportercheckConnection.305-4505971@")
 								$value:=Replace string:C233($value;"transportercheckConnection.305-4505971";"SMTP-transportercheckConnection.300-4505971";*)
+								
+							: ($value="@transporteurcheckConnection.305-4505971@")
+								$value:=Replace string:C233($value;"transporteurcheckConnection.305-4505971";"SMTP-transporteurcheckConnection.300-4505971";*)
 								
 							: ($value="@Field-properties@")
 								$value:=Replace string:C233($value;"1477337";"4575567";*)
@@ -226,6 +244,10 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"IP-Configuration.300-845391";"IP-Settings.300-4672424";*)
 								
 							: ($value="@Web-server-configuration-and-connection-management@")
+								$value:=Replace string:C233($value;"977167";"4504720";*)
+								$value:=Replace string:C233($value;"300-205403";"300-4504720";*)
+								
+							: ($value="@Mise-en-route-du-serveur-Web-et-gestion-des-connexions@")
 								$value:=Replace string:C233($value;"977167";"4504720";*)
 								$value:=Replace string:C233($value;"300-205403";"300-4504720";*)
 								
@@ -253,6 +275,10 @@ For ($i;1;Size of array:C274($types))
 								$value:=Replace string:C233($value;"dataStoreprovideDataKey.305-4505925";"dataStoreprovideDataKey.300-4505925";*)
 								
 							: ($value="@Connection-Security@")
+								$value:=Replace string:C233($value;"205401";"4504721";*)
+								$value:=Replace string:C233($value;"977166";"4504721";*)
+								
+							: ($value="@Securite-des-connexions@")
 								$value:=Replace string:C233($value;"205401";"4504721";*)
 								$value:=Replace string:C233($value;"977166";"4504721";*)
 								
@@ -310,6 +336,8 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@-.300-4575701@")
 								$value:=Replace string:C233($value;"-.300-4575701";"Creating-a-new-database.300-4575701";*)
 								
+							: ($value="@Parametrages-du-serveur-Web.300-4504709@")
+								
 							: ($value="@Web.300-4504709@")
 								$value:=Replace string:C233($value;"Web.300-4504709";"Web-Server-Settings.300-4504709";*)
 								
@@ -340,6 +368,8 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@-.300-4575608@")
 								$value:=Replace string:C233($value;"-.300-4575608";"Spell-checking.300-4575608";*)
 								
+							: ($value="@Page-SQL.300-4575466.@")
+								
 							: ($value="@SQL.300-4575466@")
 								$value:=Replace string:C233($value;"SQL.300-4575466";"SQL-page.300-4575466";*)
 								
@@ -352,8 +382,13 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@-.300-4575704@")
 								$value:=Replace string:C233($value;"-.300-4575704";"Command-Line-Interface.300-4575704";*)
 								
+							: ($value="@Connexion-a-une-base-4D-Server.300-4672439@")
+								
 							: ($value="@4D-Server.300-4672439@")
 								$value:=Replace string:C233($value;"4D-Server.300-4672439";"Connecting-to-a-4D-Server-Database.300-4672439";*)
+								
+							: ($value="@Ressources.300-977556@")
+								$value:=Replace string:C233($value;"300-977556";"300-4505047";*)
 								
 							: ($value="@-.300-4505257@")
 								$value:=Replace string:C233($value;"-.300-4505257";"Window-Types-compatibility.300-4505257";*)
@@ -377,10 +412,16 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@4D-HTML-Tags@")
 								$value:=Replace string:C233($value;"4D-HTML-Tags.300-1342175";"4D-Transformation-Tags.300-4505674";*)
 								
+							: ($value="@Balises-HTML-4D@")
+								$value:=Replace string:C233($value;"Balises-HTML-4D.300-1342175";"Balises-de-transformation-4D.300-4505674";*)
+								
 							: ($value="@Multi-style-Rich-text-area@")
 								$value:=Replace string:C233($value;"1477147";"4575616";*)
 								
 							: ($value="@Text-mit-Stil-Rich-Text@")
+								$value:=Replace string:C233($value;"1477147";"4575616";*)
+								
+							: ($value="@Multistyle-Zone-de-texte-riche@")
 								$value:=Replace string:C233($value;"1477147";"4575616";*)
 								
 							: ($value="@QUERY-BY-ATTRIBUTE@")
@@ -428,76 +469,151 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@folderfiles@")
 								$value:=Replace string:C233($value;"305-4506056";"300-4506056";*)
 								
+							: ($value="@dossierfiles@")
+								$value:=Replace string:C233($value;"305-4506056";"300-4506056";*)
+								
 							: ($value="@folderfile@")
+								$value:=Replace string:C233($value;"305-4506054";"300-4506054";*)
+								
+							: ($value="@dossierfile@")
 								$value:=Replace string:C233($value;"305-4506054";"300-4506054";*)
 								
 							: ($value="@folderfolders@")
 								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
 								
+							: ($value="@dossierfolders@")
+								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
+								
 							: ($value="@folderfolder@")
+								$value:=Replace string:C233($value;"305-4506053";"300-4506053";*)
+								
+							: ($value="@dossierfolder@")
 								$value:=Replace string:C233($value;"305-4506053";"300-4506053";*)
 								
 							: ($value="@filecopyTo@")
 								$value:=Replace string:C233($value;"305-4506082";"300-4506082";*)
 								
+							: ($value="@fichiercopyTo@")
+								$value:=Replace string:C233($value;"305-4506082";"300-4506082";*)
+								
 							: ($value="@filecreateAlias@")
+								$value:=Replace string:C233($value;"305-4506090";"300-4506090";*)
+								
+							: ($value="@fichiercreateAlias@")
 								$value:=Replace string:C233($value;"305-4506090";"300-4506090";*)
 								
 							: ($value="@filecreate@")
 								$value:=Replace string:C233($value;"305-4506085";"300-4506085";*)
 								
+							: ($value="@fichiercreate@")
+								$value:=Replace string:C233($value;"305-4506085";"300-4506085";*)
+								
 							: ($value="@filedelete@")
+								$value:=Replace string:C233($value;"305-4506084";"300-4506084";*)
+								
+							: ($value="@fichierdelete@")
 								$value:=Replace string:C233($value;"305-4506084";"300-4506084";*)
 								
 							: ($value="@filegetContent@")
 								$value:=Replace string:C233($value;"305-4506086";"300-4506086";*)
 								
+							: ($value="@fichiergetContent@")
+								$value:=Replace string:C233($value;"305-4506086";"300-4506086";*)
+								
 							: ($value="@filegetIcon@")
+								$value:=Replace string:C233($value;"305-4506065";"300-4506065";*)
+								
+							: ($value="@fichiergetIcon@")
 								$value:=Replace string:C233($value;"305-4506065";"300-4506065";*)
 								
 							: ($value="@filegetText@")
 								$value:=Replace string:C233($value;"305-4506088";"300-4506088";*)
 								
+							: ($value="@fichiergetText@")
+								$value:=Replace string:C233($value;"305-4506088";"300-4506088";*)
+								
 							: ($value="@filemoveTo@")
+								$value:=Replace string:C233($value;"305-4506083";"300-4506083";*)
+								
+							: ($value="@fichiermoveTo@")
 								$value:=Replace string:C233($value;"305-4506083";"300-4506083";*)
 								
 							: ($value="@filerename@")
 								$value:=Replace string:C233($value;"305-4506081";"300-4506081";*)
 								
+							: ($value="@fichierrename@")
+								$value:=Replace string:C233($value;"305-4506081";"300-4506081";*)
+								
 							: ($value="@filesetContent@")
+								$value:=Replace string:C233($value;"305-4506087";"300-4506087";*)
+								
+							: ($value="@fichiersetContent@")
 								$value:=Replace string:C233($value;"305-4506087";"300-4506087";*)
 								
 							: ($value="@filesetText@")
 								$value:=Replace string:C233($value;"305-4506089";"300-4506089";*)
 								
+							: ($value="@fichiersetText@")
+								$value:=Replace string:C233($value;"305-4506089";"300-4506089";*)
+								
 							: ($value="@foldercopyTo@")
+								$value:=Replace string:C233($value;"305-4506059";"300-4506059";*)
+								
+							: ($value="@dossiercopyTo@")
 								$value:=Replace string:C233($value;"305-4506059";"300-4506059";*)
 								
 							: ($value="@foldercreateAlias@")
 								$value:=Replace string:C233($value;"305-4506063";"300-4506063";*)
 								
+							: ($value="@dossiercreateAlias@")
+								$value:=Replace string:C233($value;"305-4506063";"300-4506063";*)
+								
 							: ($value="@foldercreate@")
+								$value:=Replace string:C233($value;"305-4506062";"300-4506062";*)
+								
+							: ($value="@dossiercreate@")
 								$value:=Replace string:C233($value;"305-4506062";"300-4506062";*)
 								
 							: ($value="@folderdelete@")
 								$value:=Replace string:C233($value;"305-4506061";"300-4506061";*)
 								
+							: ($value="@dossierdelete@")
+								$value:=Replace string:C233($value;"305-4506061";"300-4506061";*)
+								
 							: ($value="@foldergetIcon@")
+								$value:=Replace string:C233($value;"305-4506057";"300-4506057";*)
+								
+							: ($value="@dossiergetIcon@")
 								$value:=Replace string:C233($value;"305-4506057";"300-4506057";*)
 								
 							: ($value="@foldermoveTo@")
 								$value:=Replace string:C233($value;"305-4506060";"300-4506060";*)
 								
+							: ($value="@dossiermoveTo@")
+								$value:=Replace string:C233($value;"305-4506060";"300-4506060";*)
+								
 							: ($value="@folderrename@")
+								$value:=Replace string:C233($value;"305-4506058";"300-4506058";*)
+								
+							: ($value="@dossierrename@")
 								$value:=Replace string:C233($value;"305-4506058";"300-4506058";*)
 								
 							: ($value="@folderfolders@")
 								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
 								
+							: ($value="@dossierfolders@")
+								$value:=Replace string:C233($value;"305-4506055";"300-4506055";*)
+								
 							: ($value="@formulaapply@")
 								$value:=Replace string:C233($value;"305-4505752";"300-4505752";*)
 								
+							: ($value="@formuleapply@")
+								$value:=Replace string:C233($value;"305-4505752";"300-4505752";*)
+								
 							: ($value="@formulacall@")
+								$value:=Replace string:C233($value;"305-4505751";"300-4505751";*)
+								
+							: ($value="@formulecall@")
 								$value:=Replace string:C233($value;"305-4505751";"300-4505751";*)
 								
 							: ($value="@signalwait@")
@@ -515,7 +631,13 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@transportersend@")
 								$value:=Replace string:C233($value;"transportersend.305-4505974";"SMTP-transportersend.300-4505974";*)
 								
+							: ($value="@transporteursend@")
+								$value:=Replace string:C233($value;"transporteursend.305-4505974";"SMTP-transporteursend.300-4505974";*)
+								
 							: ($value="@attachmentgetContent@")
+								$value:=Replace string:C233($value;"305-4611486";"300-4611486";*)
+								
+							: ($value="@piecejointegetContent@")
 								$value:=Replace string:C233($value;"305-4611486";"300-4611486";*)
 								
 							: ($value="@LISTBOX-INSERT-ROW@")
@@ -543,8 +665,14 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Overview-of-XML-DOM-Commands@")
 								$value:=Replace string:C233($value;"300-205309";"300-4504762";*)
 								
-							: ($value="@4D-SQL-engine-implementation.300-4650700.de.html@")
-								$value:=Replace string:C233($value;".de.";".en.";*)
+							: ($value="@Presentation-des-commandes-XML-DOM@")
+								$value:=Replace string:C233($value;"300-205309";"300-4504762";*)
+								
+							: ($value="@4D-SQL-engine-implementation.300-4650700@")
+								  //"Next page"
+								
+							: ($value="@Implementations-du-moteur-SQL-de-4D.300-4650700@")
+								  //"Next page"
 								
 							: ($value="@Installationshandbuch@")
 								$value:=Replace string:C233($value;"100-4844794";"100-4688909";*)
@@ -579,6 +707,15 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@OBJECT-SET-CORNER-RADIUS.301-1629493@")
 								$value:=Replace string:C233($value;"OBJECT-SET-CORNER-RADIUS.301-1629493";"OBJECT-SET-CORNER-RADIUS.301-4505427";*)
 								
+							: ($value="@Proprietes-des-objets.300-977887@")
+								$value:=Replace string:C233($value;"Proprietes-des-objets.300-977887";"Objets-de-formulaires.300-4505419";*)
+								
+							: ($value="@Transaction-active@")
+								$value:=Replace string:C233($value;"301-2773925";"301-4504561";*)
+								
+							: ($value="@Methode-base-Sur-authentification-Web.300-976978@")
+								$value:=Replace string:C233($value;"300-976978";"300-4504707";*)
+								
 								
 						End case 
 						
@@ -597,6 +734,12 @@ For ($i;1;Size of array:C274($types))
 							: ($value="@Hierarchische-Listboxen-verwalten@")
 							: ($value="@Erweiterte-Command-Line-Interface-CLI@") & ($file.name="@300-4575466@")
 							: ($value="@Command-Line-Interface-extended@") & ($file.name="@300-4575466@")
+							: ($value="@Fonctionnalites-obsoletes-ou-supprimees@")
+							: ($value="@Plugins.300-3610991@")
+							: ($value="@Presentation-des-formulaires-utilisateurs.300-1342077@")
+							: ($value="@Passer-de-32-bits-a-64-bits@")
+							: ($value="@Gestion-des-List-box-hierarchiques@")
+								
 								
 							: ($value="@Die-4D-Datenbank-konfigurieren@")
 							: ($value="@Listbox-Objekt-Arrays-in-Spalten-verwenden-4D-View-Pro@")
@@ -813,6 +956,9 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Overview-of-user-forms.300-1342077@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Presentation-des-formulaires-utilisateurs.300-1342077@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@Einfuhrung-in-Benutzerformulare.300-1342077@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
@@ -843,6 +989,9 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Hierarchische-Listboxen-verwalten@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Gestion-des-List-box-hierarchiques@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 								: ($value="@Gruppierte-rollbare-Bereiche@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
@@ -861,6 +1010,12 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Verknupfungen-verwenden@")
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
+								: ($value="@Plugins.300-3610991@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Passer-de-32-bits-a-64-bits@")
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
 									  //-------------
 									
 								: ($value="@4D-ODBC-Driver@")
@@ -869,7 +1024,10 @@ For ($i;1;Size of array:C274($types))
 								: ($value="@Deprecated-or-removed-features@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
-								: ($value="@Deprecated-and-removed-features@")  //external document
+								: ($value="@Deprecated-or-removed-features@")  //external document
+									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
+									
+								: ($value="@Fonctionnalites-obsoletes-ou-supprimees@")  //external document
 									DOM SET XML ATTRIBUTE:C866($dom;"href";"")
 									
 								: ($value="@4D-ODBC-Pro@")  //external document
