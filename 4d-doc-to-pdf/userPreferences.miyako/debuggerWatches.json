@@ -1,10 +1,6 @@
 ﻿[
 	{
 		"type": 66,
-		"formula": "$chapterFile"
-	},
-	{
-		"type": 66,
 		"formula": "$value"
 	}
 ]

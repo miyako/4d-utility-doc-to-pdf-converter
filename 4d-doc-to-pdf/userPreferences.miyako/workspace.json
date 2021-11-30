@@ -1,11 +1,22 @@
 ﻿{
 	"editors": [
 		{
+			"type": "explorer"
+		},
+		{
 			"type": "method",
 			"id": 2147483644,
 			"codeDescriptor": {
 				"type": 1,
 				"methodName": "parse_href"
+			}
+		},
+		{
+			"type": "method",
+			"id": 2147483620,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "TEST_v19"
 			}
 		}
 	]

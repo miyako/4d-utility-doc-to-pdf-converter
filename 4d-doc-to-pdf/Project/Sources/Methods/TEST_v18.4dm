@@ -38,7 +38,7 @@ error deutsch
 
 
 If (False:C215)
-/* need to fix fraçais */
+/* need to fix français */
 	$book:=$books.query("id === :1";"book_4672399")[0]  //4D Server
 	$book:=$books.query("id === :1";"book_5049564")[0]  //4D v18.x リリースノート
 	$book:=$books.query("id === :1";"book_4688867")[0]  //4D v18への変換
