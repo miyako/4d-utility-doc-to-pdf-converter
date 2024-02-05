@@ -1,180 +1,183 @@
-﻿{
+{
 	"methods": {
 		"remove_iframe": {
-			"timeStamp": "2020-07-16T06:21:24.732Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"TEST_03": {
-			"timeStamp": "2020-07-16T05:51:09.720Z"
+			"timeStamp": "2024-02-05T11:55:44Z"
 		},
 		"create_chapter_page": {
-			"timeStamp": "2020-07-15T15:34:18.008Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"parse_href": {
-			"timeStamp": "2021-11-30T03:37:55.731Z",
+			"timeStamp": "2024-02-05T16:14:09Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_template": {
-			"timeStamp": "2020-07-16T05:03:53.436Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"TEST_05": {
-			"timeStamp": "2020-07-17T06:22:08.639Z"
+			"timeStamp": "2024-02-05T12:19:27Z"
 		},
 		"TEST_04": {
-			"timeStamp": "2020-07-16T05:20:18.402Z"
+			"timeStamp": "2024-02-05T11:55:44Z"
 		},
 		"insert_h4_separator": {
-			"timeStamp": "2020-07-15T03:37:33.999Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"deep_copy_node_html": {
-			"timeStamp": "2020-07-15T03:41:05.760Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"cajole_nodes": {
-			"timeStamp": "2020-07-16T06:21:17.932Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"create_chapters": {
-			"timeStamp": "2020-07-19T21:13:30.245Z",
+			"timeStamp": "2024-02-05T17:19:23Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_title_list": {
-			"timeStamp": "2020-07-19T21:13:47.842Z",
+			"timeStamp": "2024-02-05T17:19:56Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_title_paragraph": {
-			"timeStamp": "2020-07-15T03:58:48.045Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"log_push": {
-			"timeStamp": "2020-07-17T12:35:33.874Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"insert_h2": {
-			"timeStamp": "2020-07-15T15:34:18.015Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"log_end": {
-			"timeStamp": "2020-07-16T06:20:55.327Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"create_book": {
-			"timeStamp": "2020-07-16T06:20:26.260Z",
+			"timeStamp": "2024-02-05T12:18:11Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_title_list_for_constants": {
-			"timeStamp": "2020-07-19T21:13:31.360Z",
+			"timeStamp": "2024-02-05T17:19:01Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"log_start": {
-			"timeStamp": "2020-07-17T12:33:51.602Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"set_target": {
-			"timeStamp": "2020-07-14T10:31:42.514Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"anchor_name_for_file": {
-			"timeStamp": "2020-07-15T00:10:29.727Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_books": {
-			"timeStamp": "2020-07-16T06:18:53.670Z",
+			"timeStamp": "2024-02-05T12:19:39Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_preamble": {
-			"timeStamp": "2020-07-15T10:20:36.596Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"TEST_v18": {
-			"timeStamp": "2021-11-29T08:36:21.542Z"
+			"timeStamp": "2024-02-05T11:55:44Z"
 		},
 		"TEST_v19": {
-			"timeStamp": "2021-11-29T11:05:54.213Z"
+			"timeStamp": "2024-02-05T11:55:44Z"
 		},
 		"insert_chapter_link": {
-			"timeStamp": "2020-07-15T03:57:18.443Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"create_pdf": {
-			"timeStamp": "2020-07-14T10:31:57.676Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
 		},
 		"get_document_title": {
-			"timeStamp": "2020-07-15T03:55:35.090Z",
+			"timeStamp": "2024-02-05T11:55:44Z",
 			"attributes": {
 				"invisible": true,
 				"preemptive": "capable"
 			}
+		},
+		"TEST_v20": {
+			"timeStamp": "2024-02-05T17:31:33Z"
 		}
 	}
 }

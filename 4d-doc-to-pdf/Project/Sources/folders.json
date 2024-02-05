@@ -1,4 +1,4 @@
-﻿{
+{
 	"log": {
 		"methods": [
 			"log_end",
@@ -10,7 +10,9 @@
 		"methods": [
 			"TEST_03",
 			"TEST_04",
-			"TEST_05"
+			"TEST_05",
+			"TEST_v18",
+			"TEST_v19"
 		]
 	},
 	"v2": {

@@ -1,9 +1,9 @@
-﻿{
+{
 	"Sources/Methods/parse_href.4dm": {
-		"left": 1363,
-		"top": 346,
-		"width": 536,
-		"height": 708
+		"left": 855,
+		"top": 251,
+		"width": 965,
+		"height": 723
 	},
 	"Sources/Methods/TEST_03.4dm": {
 		"left": 554,
@@ -12,10 +12,10 @@
 		"height": 762
 	},
 	"Sources/Methods/get_books.4dm": {
-		"left": 475,
-		"top": 163,
-		"width": 1160,
-		"height": 792
+		"left": 1545,
+		"top": 308,
+		"width": 965,
+		"height": 726
 	},
 	"Sources/Methods/get_title_paragraph.4dm": {
 		"left": 835,
@@ -30,10 +30,10 @@
 		"height": 792
 	},
 	"Sources/Methods/create_pdf.4dm": {
-		"left": 798,
-		"top": 193,
-		"width": 844,
-		"height": 710
+		"left": 534,
+		"top": 385,
+		"width": 965,
+		"height": 654
 	},
 	"Sources/Methods/set_target.4dm": {
 		"left": 627,
@@ -49,9 +49,9 @@
 	},
 	"Sources/Methods/get_title_list.4dm": {
 		"left": 670,
-		"top": 289,
+		"top": 373,
 		"width": 965,
-		"height": 790
+		"height": 706
 	},
 	"Sources/Methods/get_document_title.4dm": {
 		"left": 615,
@@ -102,16 +102,16 @@
 		"height": 641
 	},
 	"Sources/Methods/create_chapters.4dm": {
-		"left": 670,
-		"top": 289,
+		"left": 0,
+		"top": 197,
 		"width": 965,
-		"height": 790
+		"height": 734
 	},
 	"Sources/Methods/create_book.4dm": {
-		"left": 475,
-		"top": 163,
+		"left": 604,
+		"top": 166,
 		"width": 1160,
-		"height": 792
+		"height": 764
 	},
 	"Sources/Methods/create_chapter_page.4dm": {
 		"left": 485,
@@ -126,10 +126,10 @@
 		"height": 594
 	},
 	"Sources/Methods/get_title_list_for_constants.4dm": {
-		"left": 670,
-		"top": 289,
+		"left": 788,
+		"top": 385,
 		"width": 965,
-		"height": 790
+		"height": 678
 	},
 	"Sources/Methods/remove_iframe.4dm": {
 		"left": 475,
@@ -187,9 +187,9 @@
 	},
 	"Sources/Methods/TEST_05.4dm": {
 		"left": 767,
-		"top": 167,
+		"top": 195,
 		"width": 965,
-		"height": 790
+		"height": 762
 	},
 	"Sources/Methods/TEST_v18.4dm": {
 		"left": 236,
@@ -199,14 +199,20 @@
 	},
 	"Sources/Methods/TEST_v19.4dm": {
 		"left": 249,
-		"top": 119,
-		"width": 495,
-		"height": 690
+		"top": 152,
+		"width": 965,
+		"height": 662
 	},
 	"Trash/Methods/(TEST_06).4dm": {
 		"left": 240,
 		"top": 539,
 		"width": 678,
 		"height": 622
+	},
+	"Sources/Methods/TEST_v20.4dm": {
+		"left": 482,
+		"top": 262,
+		"width": 965,
+		"height": 798
 	}
 }

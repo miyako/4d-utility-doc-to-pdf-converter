@@ -1,23 +1,23 @@
-﻿{
+{
 	"editors": [
 		{
+			"type": "method",
+			"id": 2147483619,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "TEST_v20"
+			}
+		},
+		{
+			"type": "method",
+			"id": 2147483630,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "get_title_list_for_constants"
+			}
+		},
+		{
 			"type": "explorer"
-		},
-		{
-			"type": "method",
-			"id": 2147483644,
-			"codeDescriptor": {
-				"type": 1,
-				"methodName": "parse_href"
-			}
-		},
-		{
-			"type": "method",
-			"id": 2147483620,
-			"codeDescriptor": {
-				"type": 1,
-				"methodName": "TEST_v19"
-			}
 		}
 	]
 }

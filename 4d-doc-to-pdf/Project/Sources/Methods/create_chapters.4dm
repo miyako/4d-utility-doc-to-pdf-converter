@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true,"preemptive":"capable"}
-C_TEXT:C284($1;$dom)
-C_OBJECT:C1216($2;$book)
-C_COLLECTION:C1488($3;$html)
-C_OBJECT:C1216($4;$params)
+C_TEXT:C284($1; $dom)
+C_OBJECT:C1216($2; $book)
+C_COLLECTION:C1488($3; $html)
+C_OBJECT:C1216($4; $params)
 
 $dom:=$1
 $book:=$2
@@ -12,7 +12,7 @@ $params:=$4
 C_TEXT:C284($lang)
 $lang:=$params.lang
 
-$Chapter_list:=DOM Find XML element by ID:C1010($dom;"Chapter_list")
+$Chapter_list:=DOM Find XML element by ID:C1010($dom; "Chapter_list")
 
 C_TEXT:C284($stringValue)
 C_TEXT:C284($nodeHtml)
@@ -20,29 +20,29 @@ C_TEXT:C284($nodeHtml)
 $chapterFiles:=New collection:C1472
 
 If (OK=1)
-	ARRAY TEXT:C222($paragraphs;0)
-	$p:=DOM Find XML element:C864($Chapter_list;"div/p";$paragraphs)
+	ARRAY TEXT:C222($paragraphs; 0)
+	$p:=DOM Find XML element:C864($Chapter_list; "div/p"; $paragraphs)
 	
 	If (Size of array:C274($paragraphs)#0)
 		$html.push("<p><br /></p>")
 		$html.push("<div id=\"Chapter_list\">")
 	End if 
 	
-	For ($i;1;Size of array:C274($paragraphs))
+	For ($i; 1; Size of array:C274($paragraphs))
 		
 		$p:=$paragraphs{$i}
-		$a:=DOM Find XML element:C864($p;"p/a")
+		$a:=DOM Find XML element:C864($p; "p/a")
 		
 		If (OK=1)
 			
-			DOM GET XML ELEMENT VALUE:C731($a;$stringValue)
-			$title:=Replace string:C233($stringValue;"\n";" ";*)
+			DOM GET XML ELEMENT VALUE:C731($a; $stringValue)
+			$title:=Replace string:C233($stringValue; "\n"; " "; *)
 			
-			DOM GET XML ATTRIBUTE BY NAME:C728($a;"href";$stringValue)
+			DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
 			
 			If ($stringValue#"")
 				$anchor:=$stringValue
-				DOM GET XML ATTRIBUTE BY NAME:C728($a;"xml:href";$stringValue)
+				DOM GET XML ATTRIBUTE BY NAME:C728($a; "xml:href"; $stringValue)
 				$href:=$stringValue
 			Else 
 				$anchor:="#"
@@ -51,11 +51,10 @@ If (OK=1)
 			
 			Case of 
 				: ($href="")
-					  //link to other document; skip it
+					//link to other document; skip it
 				: ($href="@Alphabetical-list-of-commands@")
-					  //skip  abc list
 				: ($href="@Alphabetische-Liste-der-Befehle@")
-					
+				: ($href="@Liste-alphabetique-des-commandes@")
 				Else 
 					C_OBJECT:C1216($chapterFile)
 					$chapterFile:=File:C1566($href)
@@ -65,7 +64,7 @@ If (OK=1)
 						TRACE:C157  //chapter file does not exist!
 					End if 
 					
-					insert_chapter_link ($p;$anchor;$title;$html)
+					insert_chapter_link($p; $anchor; $title; $html)
 					
 			End case 
 			
@@ -76,11 +75,13 @@ If (OK=1)
 	
 	$html.push("</div>")
 	
-	  //now, add pages
+	//now, add pages
 	
-	For each ($chapterFile;$chapterFiles)
-		$options:=New object:C1471("xmlOut";True:C214)
-		$status:=Tidy ($chapterFile.getContent();$options)
+	For each ($chapterFile; $chapterFiles)
+		$options:=New object:C1471("xmlOut"; True:C214)
+		C_BLOB:C604($data)
+		$data:=$chapterFile.getContent()
+		$status:=Tidy($data; $options)
 		If ($status.status<2)
 			
 /*
@@ -95,20 +96,20 @@ use this case block to trace specific source files
 					
 			End case 
 			
-			$page:=Replace string:C233($status.html;"&nbsp;";"&#160;";*)
+			$page:=Replace string:C233($status.html; "&nbsp;"; "&#160;"; *)
 			$pageDom:=DOM Parse XML variable:C720($page)
 			
-			cajole_nodes ($pageDom;$chapterFile;$params)
-			parse_href ($pageDom;$chapterFile;$book.base;$params)
-			remove_iframe ($pageDom;$chapterFile;$params)
+			cajole_nodes($pageDom; $chapterFile; $params)
+			parse_href($pageDom; $chapterFile; $book.base; $params)
+			remove_iframe($pageDom; $chapterFile; $params)
 			
-			$TitleTitle:=DOM Find XML element by ID:C1010($pageDom;"TitleTitle")
+			$TitleTitle:=DOM Find XML element by ID:C1010($pageDom; "TitleTitle")
 			If (OK=1)
-				DOM GET XML ELEMENT NAME:C730($TitleTitle;$stringValue)
+				DOM GET XML ELEMENT NAME:C730($TitleTitle; $stringValue)
 				Case of 
 					: ($stringValue="span")  //chapter cover with secions
 						
-						  //h2 > span@id=TitleTitle
+						//h2 > span@id=TitleTitle
 						
 /*
 examples:
@@ -118,21 +119,21 @@ command syntax
 						$div:=DOM Get parent XML element:C923($TitleTitle)
 						If (OK=1)
 							
-							DOM GET XML ELEMENT NAME:C730($div;$stringValue)
+							DOM GET XML ELEMENT NAME:C730($div; $stringValue)
 							
 							If ($stringValue="h2")
 								
-								insert_h2 ($TitleTitle;$chapterFile;$html)
+								insert_h2($TitleTitle; $chapterFile; $html)
 								
-								$title_paragraph:=get_title_paragraph ($pageDom)
+								$title_paragraph:=get_title_paragraph($pageDom)
 								
 								If ($title_paragraph#"")
-									get_preamble ($title_paragraph;$html)
+									get_preamble($title_paragraph; $html)
 								End if 
 								
-								insert_h4_separator ($html)
+								insert_h4_separator($html)
 								
-								get_title_list ($pageDom;$book;$html;$params)
+								get_title_list($pageDom; $book; $html; $params)
 								
 							Else 
 								TRACE:C157  //unknown document structure
@@ -143,26 +144,26 @@ command syntax
 						
 					: ($stringValue="h3")  //chapter cover with no sections
 						
-						  //div > h3@id=TitleTitle
+						//div > h3@id=TitleTitle
 						
 /*
 examples:
 4D-Widget-components.300-4690710.
 */
 						
-						insert_h2 ($TitleTitle;$chapterFile;$html)
+						insert_h2($TitleTitle; $chapterFile; $html)
 						
-						$title_paragraph:=get_title_paragraph ($pageDom)
+						$title_paragraph:=get_title_paragraph($pageDom)
 						
 						If ($title_paragraph#"")
-							get_preamble ($title_paragraph;$html)
+							get_preamble($title_paragraph; $html)
 						End if 
 						
-						insert_h4_separator ($html)
+						insert_h4_separator($html)
 						
 						$node:=DOM Get parent XML element:C923($TitleTitle)
 						
-						  //skip these
+						//skip these
 						$node:=DOM Get next sibling XML element:C724($node)  //p
 						$node:=DOM Get next sibling XML element:C724($node)  //div
 						
@@ -170,7 +171,7 @@ examples:
 						$node:=DOM Get next sibling XML element:C724($node)  //div
 						$node:=DOM Get next sibling XML element:C724($node)
 						
-						deep_copy_node_html ($node;$html)
+						deep_copy_node_html($node; $html)
 						
 					Else 
 						TRACE:C157  //unknown document structure
@@ -178,14 +179,14 @@ examples:
 				
 			Else 
 				
-				$ChapterTitle:=DOM Find XML element by ID:C1010($pageDom;"ChapterTitle")
+				$ChapterTitle:=DOM Find XML element by ID:C1010($pageDom; "ChapterTitle")
 				
 				If (OK=1)
-					DOM GET XML ELEMENT NAME:C730($ChapterTitle;$stringValue)
+					DOM GET XML ELEMENT NAME:C730($ChapterTitle; $stringValue)
 					Case of 
 						: ($stringValue="h2")
 							
-							  //div > h2@id=ChapterTitle
+							//div > h2@id=ChapterTitle
 							
 /*
 examples:
@@ -193,25 +194,25 @@ examples:
 What-s-new.901-4611717.
 */
 							
-							insert_h2 ($ChapterTitle;$chapterFile;$html)
+							insert_h2($ChapterTitle; $chapterFile; $html)
 							
-							insert_h4_separator ($html)
+							insert_h4_separator($html)
 							
-							get_title_list ($pageDom;$book;$html;$params)
+							get_title_list($pageDom; $book; $html; $params)
 							
 						Else 
 							TRACE:C157  //unknown document structure
 					End case 
 				Else 
 					
-					$newListTitle:=DOM Find XML element by ID:C1010($pageDom;"newListTitle")
+					$newListTitle:=DOM Find XML element by ID:C1010($pageDom; "newListTitle")
 					
 					If (OK=1)
-						DOM GET XML ELEMENT NAME:C730($newListTitle;$stringValue)
+						DOM GET XML ELEMENT NAME:C730($newListTitle; $stringValue)
 						Case of 
 							: ($stringValue="h1")
 								
-								  //div > h1@id=newListTitle
+								//div > h1@id=newListTitle
 								
 /*
 examples:
@@ -219,11 +220,11 @@ What-s-new.901-4611717.
 								
 */
 								
-								insert_h2 ($newListTitle;$chapterFile;$html)
+								insert_h2($newListTitle; $chapterFile; $html)
 								
-								insert_h4_separator ($html)
+								insert_h4_separator($html)
 								
-								get_title_list ($pageDom;$book;$html;$params)
+								get_title_list($pageDom; $book; $html; $params)
 								
 							Else 
 								TRACE:C157  //unknown document structure
@@ -239,7 +240,7 @@ What-s-new.901-4611717.
 			$log:=New object:C1471
 			$log.path:=$chapterFile.path
 			$log.status:=$status
-			$params.LOG_PUSH("error_invalid_html";$log)
+			$params.LOG_PUSH("error_invalid_html"; $log)
 			
 			TRACE:C157  //Tidy fail
 			
