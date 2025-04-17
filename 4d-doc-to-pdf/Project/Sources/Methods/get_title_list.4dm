@@ -47,10 +47,12 @@ most pages take this form
 					DOM GET XML ELEMENT VALUE:C731($a; $stringValue)
 					$title:=Replace string:C233($stringValue; "\n"; " "; *)
 				End if 
-				DOM GET XML ATTRIBUTE BY NAME:C728($a; "xml:href"; $stringValue)
-				$href:=$stringValue
 				DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
 				$anchor:=$stringValue
+				If ($stringValue#"")
+					DOM GET XML ATTRIBUTE BY NAME:C728($a; "xml:href"; $stringValue)
+					$href:=$stringValue
+				End if 
 				
 				Case of 
 					: ($href="")

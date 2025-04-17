@@ -42,6 +42,10 @@ If ($sourceIndexFolder.exists)
 					DOM GET XML ATTRIBUTE BY NAME:C728($h3; "id"; $stringValue)
 					$book.id:=$stringValue
 					$a:=DOM Find XML element:C864($h3; "h3/a")
+					If (OK=0)
+						$a:=DOM Find XML element:C864($h3; "h3/span/a")
+					End if 
+					
 					DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
 					$book.href:=$stringValue
 					$book.file:=$sourceIndexFolder.file($stringValue)
