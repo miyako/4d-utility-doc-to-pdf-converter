@@ -48,10 +48,62 @@ most pages take this form
 					$title:=Replace string:C233($stringValue; "\n"; " "; *)
 				End if 
 				DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
+				
 				$anchor:=$stringValue
 				If ($stringValue#"")
 					DOM GET XML ATTRIBUTE BY NAME:C728($a; "xml:href"; $stringValue)
 					$href:=$stringValue
+				Else 
+					Case of 
+						: ($title=" 4D Server 64-bit für OS X verwenden")
+							$title:="4D Server 64-bit für OS X verwenden"
+							$targetFile:=File:C1566("/Users/miyako/Documents/4Dv15/4D/15.4/4D-Server-64-bit-fur-OS-X-verwenden.300-3286407.de.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+						: ($title=" Utiliser 4D Server 64 bits (OS X)")
+							$title:="Utiliser 4D Server 64 bits (OS X)"
+							$targetFile:=File:C1566("/Users/miyako/Documents/4Dv15/4D/15.4/Utiliser-4D-Server-64-bits-OS-X.300-3286407.fr.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+						: ($title=" Using 4D Server 64-bit version (OS X)")
+							$title:="Using 4D Server 64-bit version (OS X)"
+							$targetFile:=File:C1566("/Users/miyako/Documents/4Dv15/4D/15.4/Using-4D-Server-64-bit-version-OS-X.300-3286407.en.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+							
+						: ($title=" OS X用64ビット版4D Serverの使用について")
+							$title:="OS X用64ビット版4D Serverの使用について"
+							$targetFile:=File:C1566("//Users/miyako/Documents/4Dv15/4D/15.4/Using-4D-Server-64-bit-version-OS-X.300-3286407.ja.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+						: ($title=" Fonctionnalités obsolètes ou supprimées dans la gamme v16")
+							$title:="Fonctionnalités obsolètes ou supprimées dans la gamme v16"
+							$targetFile:=File:C1566("/Users/miyako/Documents/4Dv16/4D/16/Fonctionnalites-obsoletes-ou-supprimees-dans-la-gamme-v16.200-3072042.fr.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+						: ($title="WP CREATE BOOKMARK")
+							$targetFile:=File:C1566("/Users/miyako/Documents/4Dv16/4D/16/WP-CREATE-BOOKMARK.301-3073319.en.html")
+							$link:="#"+anchor_name_for_file($targetFile)
+							DOM SET XML ATTRIBUTE:C866($a; "href"; $link)
+							DOM SET XML ATTRIBUTE:C866($a; "xml:href"; $targetFile.path)
+							$anchor:=$link
+							$href:=$targetFile.path
+					End case 
 				End if 
 				
 				Case of 

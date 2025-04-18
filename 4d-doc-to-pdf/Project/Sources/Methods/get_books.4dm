@@ -45,16 +45,24 @@ If ($sourceIndexFolder.exists)
 					If (OK=0)
 						$a:=DOM Find XML element:C864($h3; "h3/span/a")
 					End if 
-					
-					DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
-					$book.href:=$stringValue
-					$book.file:=$sourceIndexFolder.file($stringValue)
-					$book.base:=$sourceIndexFolder
-					DOM GET XML ATTRIBUTE BY NAME:C728($a; "title"; $stringValue)
-					$book.title:=$stringValue
-					DOM GET XML ELEMENT VALUE:C731($a; $stringValue)
-					$book.name:=Replace string:C233($stringValue; "\n"; " "; *)  //element value may contain \n
-					$books.push($book)
+					If (OK=0)
+						OK:=1
+					Else 
+						DOM GET XML ATTRIBUTE BY NAME:C728($a; "href"; $stringValue)
+						$book.href:=$stringValue
+						$book.file:=$sourceIndexFolder.file($stringValue)
+						$book.base:=$sourceIndexFolder
+						DOM GET XML ATTRIBUTE BY NAME:C728($a; "title"; $stringValue)
+						$book.title:=$stringValue
+						DOM GET XML ELEMENT VALUE:C731($a; $stringValue)
+						If ($stringValue="")
+							TRACE:C157
+							$book.name:=$book.file.name
+						Else 
+							$book.name:=Replace string:C233($stringValue; "\n"; " "; *)  //element value may contain \n
+						End if 
+						$books.push($book)
+					End if 
 				End if 
 			Until (OK=0)
 			DOM CLOSE XML:C722($dom)

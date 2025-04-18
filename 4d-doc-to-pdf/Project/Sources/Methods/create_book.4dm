@@ -24,6 +24,7 @@ If ($bookFile.exists)
 	If ($status.status<2)
 		
 		$html:=Replace string:C233($status.html; "&nbsp;"; "&#160;"; *)
+		
 		$dom:=DOM Parse XML variable:C720($html)
 		
 		cajole_nodes($dom; $bookFile; $params)

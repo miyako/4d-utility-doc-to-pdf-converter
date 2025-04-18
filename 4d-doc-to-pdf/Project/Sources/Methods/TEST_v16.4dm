@@ -15,7 +15,7 @@ links may traverse outside the base URL
 */
 
 $params.sourceIndexFolder:=Folder:C1567($path; fk platform path:K87:2)
-$params.lang:="ja"
+$params.lang:="de"
 
 /*
 export detected errors (missing link, etc)
@@ -34,44 +34,25 @@ $books:=get_books($params)
 $book:=$books.query("id === :1"; "book_3670638")[0]  //design
 $book:=$books.query("id === :1"; "book_3650984")[0]  //install
 $book:=$books.query("id === :1"; "book_3423307")[0]  //upgrade
-$book:=$books.query("id === :1"; "book_3423359")[0]  //odbc driver
-$book:=$books.query("id === :1"; "book_3423421")[0]  //build
-$book:=$books.query("id === :1"; "book_3423415")[0]  //backup
-//$book:=$books.query("id === :1"; "book_3200498")[0]  //odbc pro
-$book:=$books.query("id === :1"; "book_3423462")[0]  //pack
+$book:=$books.query("id === :1"; "book_3200467")[0]  //odbc driver
+$book:=$books.query("id === :1"; "book_3130124")[0]  //build
+$book:=$books.query("id === :1"; "book_3207198")[0]  //backup
+$book:=$books.query("id === :1"; "book_3200498")[0]  //odbc pro
+$book:=$books.query("id === :1"; "book_3010622")[0]  //pack
 $book:=$books.query("id === :1"; "book_3423373")[0]  //progress
 $book:=$books.query("id === :1"; "book_3423397")[0]  //widgets
-$book:=$books.query("id === :1"; "book_3423385")[0]  //svg
+$book:=$books.query("id === :1"; "book_3202293")[0]  //svg
 $book:=$books.query("id === :1"; "book_3423353")[0]  //mobile
 $book:=$books.query("id === :1"; "book_3423335")[0]  //deprecated
 $book:=$books.query("id === :1"; "book_3423391")[0]  //view
-$book:=$books.query("id === :1"; "book_3423347")[0]  //ic
+$book:=$books.query("id === :1"; "book_3069756")[0]  //ic
 $book:=$books.query("id === :1"; "book_3423329")[0]  //server
-$book:=$books.query("id === :1"; "book_3423379")[0]  //sql
+$book:=$books.query("id === :1"; "book_3201173")[0]  //sql
 $book:=$books.query("id === :1"; "book_3673248")[0]  //convert
-//$book:=$books.query("id === :1"; "book_3199478")[0]  //oci
+$book:=$books.query("id === :1"; "book_3199478")[0]  //oci
 $book:=$books.query("id === :1"; "book_3651020")[0]  //lang
 //$book:=$books.query("id === :1"; "book_3423403")[0]  //write
 //$book:=$books.query("id === :1"; "book_3423409")[0]  //write lang
-
-If (False:C215)
-	$book:=$books.query("id === :1"; "book_6341911")[0]  //4D Progress（進捗バー）
-	$book:=$books.query("id === :1"; "book_6343777")[0]  //4D v20 リリースノート
-	$book:=$books.query("id === :1"; "book_6340540")[0]  //4D for OCI
-	$book:=$books.query("id === :1"; "book_6259787")[0]  //廃止予定または削除された機能
-	$book:=$books.query("id === :1"; "book_6341136")[0]  //4D Internet Commands
-	$book:=$books.query("id === :1"; "book_6330521")[0]  //4D Server
-	$book:=$books.query("id === :1"; "book_6342795")[0]  //SVGコンポーネント
-	$book:=$books.query("id === :1"; "book_6343444")[0]  //4D View Pro リファレンス
-	$book:=$books.query("id === :1"; "book_6343453")[0]  //4D Widgets（ウィジェット）
-	$book:=$books.query("id === :1"; "book_6229455")[0]  //4D Write Proリファレンス
-	$book:=$books.query("id === :1"; "book_6335734")[0]  //アプリケーションビルド設定ファイル
-	$book:=$books.query("id === :1"; "book_6343616")[0]  //バックアップ設定ファイル
-	$book:=$books.query("id === :1"; "book_6479538")[0]  //ランゲージリファレンス
-	$book:=$books.query("id === :1"; "book_6341902")[0]  //4D ODBC Driver
-	$book:=$books.query("id === :1"; "book_6342002")[0]  //SQLリファレンス
-	$book:=$books.query("id === :1"; "book_6602032")[0]  //デザインリファレンス
-End if 
 
 If (False:C215)  //v14
 	//$book:=$books.query("id === :1"; "book_1418787")[0]  //install
@@ -95,29 +76,6 @@ If (False:C215)  //v14
 	//$book:=$books.query("id === :1"; "book_1418809")[0]  //sql
 	//$book:=$books.query("id === :1"; "book_1705332")[0]  //design
 	//$book:=$books.query("id === :1"; "book_1696430")[0]  //lang
-End if 
-
-If (False:C215)  //v17
-	$book:=$books.query("id === :1"; "book_1339646")[0]  //upgrade
-	$book:=$books.query("id === :1"; "book_3970335")[0]  //convert
-	$book:=$books.query("id === :1"; "book_3970374")[0]  //server
-	$book:=$books.query("id === :1"; "book_3970380")[0]  //deprecated
-	$book:=$books.query("id === :1"; "book_3970467")[0]  //ic
-	$book:=$books.query("id === :1"; "book_3970473")[0]  //mobile
-	$book:=$books.query("id === :1"; "book_3970479")[0]  //odbc driver
-	$book:=$books.query("id === :1"; "book_3970497")[0]  //progress
-	$book:=$books.query("id === :1"; "book_3970503")[0]  //sql
-	$book:=$books.query("id === :1"; "book_3970354")[0]  //install
-	$book:=$books.query("id === :1"; "book_3970523")[0]  //widget
-	$book:=$books.query("id === :1"; "book_3970517")[0]  //vp
-	$book:=$books.query("id === :1"; "book_3970511")[0]  //svg
-	$book:=$books.query("id === :1"; "book_3970535")[0]  //backup
-	$book:=$books.query("id === :1"; "book_3970541")[0]  //build
-	$book:=$books.query("id === :1"; "book_3970368")[0]  //design
-	$book:=$books.query("id === :1"; "book_3786195")[0]  //odbc pro
-	$book:=$books.query("id === :1"; "book_3784766")[0]  //oci
-	$book:=$books.query("id === :1"; "book_3970529")[0]  //wp
-	$book:=$books.query("id === :1"; "book_3970362")[0]  //lang
 End if 
 
 /*
