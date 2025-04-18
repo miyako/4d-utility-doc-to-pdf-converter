@@ -3,3 +3,5 @@
 
 # 4d-utility-doc-to-pdf-converter
 Convert static HTML documentation to PDF using wkhtmltopdf
+
+note to self: remember to move images to export dirctory!
